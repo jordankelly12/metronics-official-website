@@ -1,23 +1,39 @@
 {
   "name": "metronics-official-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "The official website for Metronics, Inc.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/ -o public/css/ --recursive",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon server.js\" \"npm run sass\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/profjjk/metronics-official-website.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "Metronics",
+    "Robinair"
+  ],
+  "author": "Jordan Kelly",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/profjjk/metronics-official-website/issues"
   },
   "homepage": "https://github.com/profjjk/metronics-official-website#readme",
   "devDependencies": {
+    "concurrently": "^6.3.0",
+    "node-sass": "^6.0.1",
     "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "if-env": "^1.0.4",
+    "mongoose": "^6.0.12"
   }
 }

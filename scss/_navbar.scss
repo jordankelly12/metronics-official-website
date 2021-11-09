@@ -1,0 +1,36 @@
+@import 'config';
+
+nav {
+  background: $blue;
+  padding: 10px 40px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      color: $light;
+      span {
+        color: $yellow;
+        font-size: small;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      color: $light;
+      font-weight: bolder;
+      gap: 50px;
+      li:hover {
+        cursor: pointer;
+        color: $yellow;
+        @include easeOut;
+      }
+      li.active {
+        color: $yellow;
+      }
+    }
+  }
+}
