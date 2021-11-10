@@ -26,32 +26,48 @@ nav {
         color: #ffc947; }
 
 #home-page {
-  height: 100vh;
-  padding: 40px 40px 0 40px;
+  height: 90vh;
+  padding: 50px 0;
   display: grid;
   grid-template-columns: repeat(2, 50%); }
-  #home-page div:nth-child(1) {
-    padding-top: 40px; }
-    #home-page div:nth-child(1) h2 {
+  #home-page div.left {
+    padding: 50px 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    #home-page div.left h2 {
       font-weight: 100;
       font-size: 2em; }
-    #home-page div:nth-child(1) h3 {
+    #home-page div.left h3 {
       color: #185adb;
       font-size: 3.5em;
       margin: 15px 0; }
-    #home-page div:nth-child(1) p {
+    #home-page div.left p {
       margin-top: 25px;
       margin-bottom: 40px;
       max-width: 450px; }
-  #home-page div:nth-child(2) {
+    #home-page div.left div.logo-div {
+      width: 45%;
+      position: absolute;
+      bottom: 10px; }
+      #home-page div.left div.logo-div p {
+        margin-bottom: 10px;
+        font-size: .8rem;
+        font-weight: 100;
+        color: gray;
+        font-style: italic; }
+      #home-page div.left div.logo-div div.logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px; }
+  #home-page div.right {
     position: relative;
     display: flex;
-    align-content: end; }
-    #home-page div:nth-child(2) #hero {
-      height: auto;
-      max-height: 85%;
-      width: 100%;
-      object-fit: contain; }
+    align-content: end;
+    bottom: 0; }
+    #home-page div.right #hero {
+      max-height: 80%;
+      align-self: flex-end; }
 
 * {
   box-sizing: border-box;
@@ -62,6 +78,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: #efefef;
   color: #0a1931; }
+
+img {
+  height: auto;
+  width: 100%;
+  object-fit: contain; }
 
 .text-blue {
   color: #185adb; }

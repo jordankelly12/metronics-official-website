@@ -1,12 +1,15 @@
 @import 'config';
 
 #home-page {
-  height: 100vh;
-  padding: 40px 40px 0 40px;
+  height: 90vh;
+  padding: 50px 0;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  div:nth-child(1) {
-    padding-top: 40px;
+  div.left {
+    padding: 50px 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     h2 {
       font-weight: 100;
       font-size: 2em;
@@ -21,16 +24,32 @@
       margin-bottom: 40px;
       max-width: 450px;
     }
+    div.logo-div {
+      width: 45%;
+      position: absolute;
+      bottom: 10px;
+      p {
+        margin-bottom: 10px;
+        font-size: .8rem;
+        font-weight: 100;
+        color: gray;
+        font-style: italic;
+      }
+      div.logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+    }
   }
-  div:nth-child(2) {
+  div.right {
     position: relative;
     display: flex;
     align-content: end;
+    bottom: 0;
     #hero {
-      height: auto;
-      max-height: 85%;
-      width: 100%;
-      object-fit: contain;
+      max-height: 80%;
+      align-self: flex-end;
     }
   }
 }
