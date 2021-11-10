@@ -1,0 +1,36 @@
+@import 'config';
+
+#home-page {
+  height: 100vh;
+  padding: 40px 40px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  div:nth-child(1) {
+    padding-top: 40px;
+    h2 {
+      font-weight: 100;
+      font-size: 2em;
+    }
+    h3 {
+      color: $blue;
+      font-size: 3.5em;
+      margin: 15px 0;
+    }
+    p {
+      margin-top: 25px;
+      margin-bottom: 40px;
+      max-width: 450px;
+    }
+  }
+  div:nth-child(2) {
+    position: relative;
+    display: flex;
+    align-content: end;
+    #hero {
+      height: auto;
+      max-height: 85%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+#home-page {
+  height: 100vh;
+  padding: 40px 40px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%); }
+  #home-page div:nth-child(1) {
+    padding-top: 40px; }
+    #home-page div:nth-child(1) h2 {
+      font-weight: 100;
+      font-size: 2em; }
+    #home-page div:nth-child(1) h3 {
+      color: #185adb;
+      font-size: 3.5em;
+      margin: 15px 0; }
+    #home-page div:nth-child(1) p {
+      margin-top: 25px;
+      margin-bottom: 40px;
+      max-width: 450px; }
+  #home-page div:nth-child(2) {
+    position: relative;
+    display: flex;
+    align-content: end; }
+    #home-page div:nth-child(2) #hero {
+      height: auto;
+      max-height: 85%;
+      width: 100%;
+      object-fit: contain; }

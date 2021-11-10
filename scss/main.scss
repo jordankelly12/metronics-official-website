@@ -1,5 +1,6 @@
 @import 'config';
 @import 'navbar';
+@import 'homepage';
 
 // General Styles
 * {
@@ -9,6 +10,7 @@
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  background: $light;
   color: $dark;
 }
 
@@ -16,3 +18,22 @@ body {
 .text-blue { color: $blue }
 .text-yellow { color: $yellow }
 .text-light { color: $light }
+
+// Button Styles
+.btn-link {
+  padding: 10px;
+  background: $yellow;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  width: 140px;
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.btn-div {
+  display: flex;
+  gap: 20px;
+}

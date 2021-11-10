@@ -8,7 +8,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     h1 {
-      color: $light;
+      color: white;
       span {
         color: $yellow;
         font-size: small;
@@ -20,16 +20,18 @@ nav {
     ul {
       display: flex;
       list-style: none;
-      color: $light;
+      color: white;
       font-weight: bolder;
       gap: 50px;
-      li:hover {
-        cursor: pointer;
-        color: $yellow;
-        @include easeOut;
-      }
-      li.active {
-        color: $yellow;
+      li {
+        &:hover {
+          cursor: pointer;
+          color: $yellow;
+          @include easeOut;
+        }
+        &.active {
+          color: $yellow;
+        }
       }
     }
   }
