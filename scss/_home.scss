@@ -1,12 +1,13 @@
 @import 'config';
 
 #home-page {
-  height: 90vh;
-  padding: 50px 0;
+  height: 93vh;
+  padding-top: 50px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   div.left {
-    padding: 50px 0 0 50px;
+    padding-top: 50px;
+    padding-left: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -39,16 +40,19 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        max-width: 60%;
+        img {
+          max-width: 150px;
+        }
       }
     }
   }
   div.right {
     position: relative;
     display: flex;
-    align-content: end;
-    bottom: 0;
-    #hero {
-      max-height: 80%;
+    img {
+      margin-bottom: 10px;
+      max-height: 80vh;
       align-self: flex-end;
     }
   }
