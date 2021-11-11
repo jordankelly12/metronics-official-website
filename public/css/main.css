@@ -48,10 +48,10 @@ nav {
   height: 93vh;
   padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(2, 50%); }
+  grid-template-columns: 40% 45vw;
+  justify-content: center; }
   #home-page div.left {
     padding-top: 50px;
-    padding-left: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
@@ -60,7 +60,7 @@ nav {
       font-size: 2em; }
     #home-page div.left h3 {
       color: #185adb;
-      font-size: 3.5em;
+      font-size: 3.2em;
       margin: 15px 0; }
     #home-page div.left p {
       margin-top: 25px;
@@ -91,14 +91,33 @@ nav {
       max-height: 80vh;
       align-self: flex-end; }
 
-.text-blue {
-  color: #185adb; }
-
-.text-yellow {
-  color: #ffc947; }
-
-.text-light {
-  color: #efefef; }
+#services-page {
+  height: 93vh;
+  max-width: 1000px;
+  padding-top: 50px;
+  display: grid; }
+  #services-page h2 {
+    font-weight: 100;
+    align-self: center; }
+  #services-page h3 {
+    color: #185adb;
+    font-size: 1.3rem;
+    padding-bottom: 10px; }
+  #services-page div.services-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+    align-content: center; }
+    #services-page div.services-div p {
+      font-size: 1.1rem;
+      line-height: 1.5; }
+  #services-page div.btn-div {
+    margin-top: 20px;
+    justify-content: center; }
+  #services-page h4 {
+    font-size: 1.2rem;
+    text-align: center; }
 
 .btn-link {
   padding: 10px;
@@ -106,6 +125,7 @@ nav {
   font-size: 1.2rem;
   font-weight: 500;
   color: white;
+  height: 65px;
   width: 140px;
   border: none;
   border-radius: 10px; }
