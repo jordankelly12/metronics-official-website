@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Open Sans', sans-serif;
   background: $light;
@@ -13,7 +16,7 @@ body {
 }
 main {
   max-width: 1250px;
-  margin: auto;
+  margin: 60px auto 0 auto;
 }
 img {
   height: auto;
@@ -24,6 +27,7 @@ img {
 @import 'navbar';
 @import 'home';
 @import 'services';
+@import 'equipment';
 @import 'contact';
 
 // Button Styles

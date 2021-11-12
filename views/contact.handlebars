@@ -19,17 +19,11 @@
     <div class="contact-area">
         <div class="contact-form">
             <p>For general inquiries, please fill out the contact form below.</p>
-            <form>
-                <label>
-                    <input placeholder="Your name" />
-                </label>
-                <label>
-                    <input placeholder="Your email" />
-                </label>
-                <label>
-                    <textarea placeholder="Message"></textarea>
-                </label>
-                <button id="contact-btn">Submit</button>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your name" />
+                <input type="text" name="email" placeholder="Email or phone #" />
+                <textarea name="message" placeholder="Message"></textarea>
+                <button id="contact-btn" type="submit">Send</button>
             </form>
         </div>
         <div class="contact-info">

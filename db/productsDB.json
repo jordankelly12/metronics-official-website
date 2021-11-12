@@ -1,0 +1,34 @@
+[
+  {
+    "_id": 1,
+    "name": "34788NI",
+    "description": "Premier R-134A refrigerant recovery, recycling, and recharging machine.",
+    "image": "img/products/machines/robinair_34788NI.jpg",
+    "category": "machine",
+    "attachments": "img/products/attachments/robinair_34788NI_flyer.pdf"
+  },
+  {
+    "_id": 2,
+    "name": "34788NI",
+    "description": "Premier R-134A refrigerant recovery, recycling, and recharging machine.",
+    "image": "img/products/machines/robinair_34788NI.jpg",
+    "category": "machine",
+    "attachments": "img/products/attachments/robinair_34788NI_flyer.pdf"
+  },
+  {
+    "_id": 3,
+    "name": "34788NI",
+    "description": "Premier R-134A refrigerant recovery, recycling, and recharging machine.",
+    "image": "img/products/machines/robinair_34788NI.jpg",
+    "category": "machine",
+    "attachments": "img/products/attachments/robinair_34788NI_flyer.pdf"
+  },
+  {
+    "_id": 4,
+    "name": "34788NI",
+    "description": "Premier R-134A refrigerant recovery, recycling, and recharging machine.",
+    "image": "img/products/machines/robinair_34788NI.jpg",
+    "category": "machine",
+    "attachments": "img/products/attachments/robinair_34788NI_flyer.pdf"
+  }
+]

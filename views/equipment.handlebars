@@ -11,6 +11,58 @@
         </div>
     </nav>
 </header>
+
+<aside id="sidebar">
+    <div id="callout">
+        <p>Give us a call to inquire about pricing, financing options,
+            and to place an order.</p>
+        <h4>(415) 309-8160</h4>
+    </div>
+    <div id="side-nav">
+        <ul>
+            <li><a href="#top">A/C Machines</a></li>
+            <li><a href="#accessories">Accessories</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#consumables">Consumables</a></li>
+        </ul>
+    </div>
+</aside>
+
 <main id="equipment-page">
-    <h4>Equipment Page</h4>
+    <div class="product-section">
+        <h2>A/C Machines</h2>
+        <hr />
+        <div class="product-grid" id="machines">
+            {{#each machines}}
+                {{> product-block}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="product-section">
+        <h2>Accessories</h2>
+        <hr />
+        <div class="product-grid" id="accessories">
+            {{#each accessories}}
+                {{> product-block}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="product-section">
+        <h2>Tools</h2>
+        <hr />
+        <div class="product-grid" id="tools">
+            {{#each tools}}
+                {{> product-block}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="product-section">
+        <h2>Consumables</h2>
+        <hr />
+        <div class="product-grid" id="consumables">
+            {{#each consumables}}
+                {{> product-block}}
+            {{/each}}
+        </div>
+    </div>
 </main>
