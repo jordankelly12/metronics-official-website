@@ -29,6 +29,10 @@ $(document).ready(() => {
         e.target.message.value = '';
     });
 
-    // Equipment page side-navbar display changes
-
+    // Equipment page - change active page-link
+    const pageLinks = document.querySelectorAll('.page-link');
+    $('.page-link').on('click', e => {
+        pageLinks.forEach(link => link.classList.remove('active'));
+        e.target.classList.add('active');
+    });
 });

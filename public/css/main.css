@@ -9,46 +9,51 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   background: #efefef;
-  color: #0a1931; }
+  color: #0a1931;
+  position: relative; }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background: #185adb;
+  padding: 15px 60px 15px 40px;
+  z-index: 1; }
 
 main {
   max-width: 1250px;
-  margin: 60px auto 0 auto; }
+  position: relative;
+  top: 60px;
+  margin: 0 auto; }
 
 img {
   height: auto;
   width: 100%;
   object-fit: contain; }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  background: #185adb;
-  padding: 15px 40px; }
-  nav div {
+nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  nav div h1 {
+    color: white; }
+    nav div h1 span {
+      color: #ffc947;
+      font-size: small; }
+    nav div h1:hover {
+      cursor: pointer; }
+  nav div ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    nav div h1 {
-      color: white; }
-      nav div h1 span {
-        color: #ffc947;
-        font-size: small; }
-      nav div h1:hover {
-        cursor: pointer; }
-    nav div ul {
-      display: flex;
-      list-style: none;
-      color: white;
-      font-weight: bolder;
-      gap: 50px; }
-      nav div ul li:hover {
-        cursor: pointer;
-        color: #ffc947;
-        transition: all .5s ease-out; }
-      nav div ul li.active {
-        color: #ffc947; }
+    list-style: none;
+    color: white;
+    font-weight: bolder;
+    gap: 50px; }
+    nav div ul li:hover {
+      cursor: pointer;
+      color: #ffc947;
+      transition: all .5s ease-out; }
+    nav div ul li.active {
+      color: #ffc947; }
 
 #home-page {
   height: 93vh;
@@ -125,19 +130,27 @@ nav {
     font-size: 1.2rem;
     text-align: center; }
 
+#equipment-page {
+  position: relative;
+  max-width: 1250px;
+  top: 60px;
+  margin: 0 auto; }
+
 #sidebar {
+  margin-top: 110px;
   padding: 50px 25px 0 25px;
   position: fixed;
-  left: 0;
   width: 250px; }
   #sidebar #callout {
     padding: 25px;
     background: #185adb;
-    border-radius: 15px; }
+    border-radius: 15px;
+    margin-bottom: 20px; }
     #sidebar #callout p, #sidebar #callout h4 {
       color: #ffc947;
       text-align: center;
-      font-size: 1.1rem; }
+      font-size: 1.1rem;
+      line-height: 1.4; }
     #sidebar #callout h4 {
       margin-top: 25px; }
   #sidebar #side-nav {
@@ -145,44 +158,57 @@ nav {
     #sidebar #side-nav ul {
       list-style: none;
       padding: 10px; }
-      #sidebar #side-nav ul li a {
+      #sidebar #side-nav ul li {
         margin-bottom: 35px; }
-        #sidebar #side-nav ul li a:hover {
-          cursor: pointer; }
+        #sidebar #side-nav ul li a {
+          color: #0a1931;
+          text-decoration: none; }
+          #sidebar #side-nav ul li a:hover {
+            cursor: pointer; }
+          #sidebar #side-nav ul li a.active {
+            font-weight: 700; }
 
-#equipment-page {
+#equipment-page-main {
   margin-left: 300px;
-  padding: 50px 25px 0 25px; }
-  #equipment-page h2 {
+  padding: 0 0 50px 25px; }
+  #equipment-page-main h2 {
     color: #185adb;
     margin-bottom: 5px; }
-  #equipment-page hr {
+    #equipment-page-main h2::before {
+      display: block;
+      content: " ";
+      margin-top: -110px;
+      height: 110px;
+      visibility: hidden;
+      pointer-events: none; }
+  #equipment-page-main hr {
     border: 1px solid gray;
     margin-bottom: 30px; }
-  #equipment-page div.product-section {
+  #equipment-page-main div.product-section {
     margin-bottom: 60px; }
-    #equipment-page div.product-section div.product-grid {
+    #equipment-page-main div.product-section div.product-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 20px;
       row-gap: 30px; }
-      #equipment-page div.product-section div.product-grid div.product-item {
+      #equipment-page-main div.product-section div.product-grid div.product-item {
         display: grid;
         grid-template-columns: 35% 65%;
         padding-right: 20px;
-        gap: 15px;
-        z-index: -1; }
-        #equipment-page div.product-section div.product-grid div.product-item div {
+        gap: 15px; }
+        #equipment-page-main div.product-section div.product-grid div.product-item div {
           position: relative; }
-          #equipment-page div.product-section div.product-grid div.product-item div h3 {
+          #equipment-page-main div.product-section div.product-grid div.product-item div h3 {
             margin-bottom: 20px; }
-          #equipment-page div.product-section div.product-grid div.product-item div a {
+          #equipment-page-main div.product-section div.product-grid div.product-item div a {
             position: absolute;
-            bottom: 0;
+            bottom: 15px;
             color: #185adb;
             font-size: 0.9rem;
             font-weight: 600;
             text-decoration: none; }
+            #equipment-page-main div.product-section div.product-grid div.product-item div a:hover {
+              cursor: pointer; }
 
 #contact-page {
   height: 93vh;

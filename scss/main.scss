@@ -13,10 +13,21 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: $light;
   color: $dark;
+  position: relative;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background: $blue;
+  padding: 15px 60px 15px 40px;
+  z-index: 1;
 }
 main {
   max-width: 1250px;
-  margin: 60px auto 0 auto;
+  position: relative;
+  top: 60px;
+  margin: 0 auto;
 }
 img {
   height: auto;

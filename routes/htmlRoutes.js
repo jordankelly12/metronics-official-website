@@ -14,10 +14,10 @@ module.exports = app => {
     app.get('/equipment', async (req, res) => {
         try {
             // use await when fetching real data from server-side database.
-            const machines = require('../db/productsDB.json').filter(prod => prod.category === 'machine');
-            const accessories = require('../db/productsDB.json').filter(prod => prod.category === 'accessory');
-            const tools = require('../db/productsDB.json').filter(prod => prod.category === 'tool');
-            const consumables = require('../db/productsDB.json').filter(prod => prod.category === 'consumable');
+            const machines = require('../db/products.json').filter(prod => prod.category === 'machine');
+            const accessories = require('../db/products.json').filter(prod => prod.category === 'accessory');
+            const tools = require('../db/products.json').filter(prod => prod.category === 'tool');
+            const consumables = require('../db/products.json').filter(prod => prod.category === 'consumable');
             res.render('equipment', { machines, accessories, tools, consumables })
         } catch(err) { console.error(err) }
 

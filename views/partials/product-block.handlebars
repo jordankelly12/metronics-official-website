@@ -3,6 +3,8 @@
     <div>
         <h3>{{name}}</h3>
         <p>{{description}}</p>
-        <a href="{{attachment}}" download="{{name}}">Download Flyer</a>
+        {{#if attachment}}
+            <a href="{{attachment}}" download="{{name}}">Download Flyer</a>
+        {{/if}}
     </div>
 </div>

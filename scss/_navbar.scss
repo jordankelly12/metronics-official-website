@@ -1,11 +1,6 @@
 @import 'config';
 
 nav {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  background: $blue;
-  padding: 15px 40px;
   div {
     display: flex;
     justify-content: space-between;

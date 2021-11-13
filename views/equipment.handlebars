@@ -12,57 +12,62 @@
     </nav>
 </header>
 
-<aside id="sidebar">
-    <div id="callout">
-        <p>Give us a call to inquire about pricing, financing options,
-            and to place an order.</p>
-        <h4>(415) 309-8160</h4>
-    </div>
-    <div id="side-nav">
-        <ul>
-            <li><a href="#top">A/C Machines</a></li>
-            <li><a href="#accessories">Accessories</a></li>
-            <li><a href="#tools">Tools</a></li>
-            <li><a href="#consumables">Consumables</a></li>
-        </ul>
-    </div>
-</aside>
+<div id="equipment-page">
+    <aside id="sidebar">
+        <div id="callout">
+            <p>Give us a call to inquire about pricing, financing options,
+                and to place an order.</p>
+            <h4>(415) 309-8160</h4>
+        </div>
+        <div id="side-nav">
+            <ul>
+                <li><a class="page-link active" href="#machines">A/C Machines</a></li>
+                <li><a class="page-link" href="#accessories">Accessories</a></li>
+                <li><a class="page-link" href="#tools">Tools</a></li>
+                <li><a class="page-link" href="#consumables">Consumables</a></li>
+            </ul>
+        </div>
+    </aside>
 
-<main id="equipment-page">
-    <div class="product-section">
-        <h2>A/C Machines</h2>
-        <hr />
-        <div class="product-grid" id="machines">
-            {{#each machines}}
-                {{> product-block}}
-            {{/each}}
+    <main id="equipment-page-main">
+        <div class="product-section" id="machines">
+            <h2>A/C Machines</h2>
+            <hr />
+            <div class="product-grid">
+                {{#each machines}}
+                    {{> product-block}}
+                {{/each}}
+            </div>
         </div>
-    </div>
-    <div class="product-section">
-        <h2>Accessories</h2>
-        <hr />
-        <div class="product-grid" id="accessories">
-            {{#each accessories}}
-                {{> product-block}}
-            {{/each}}
+        <div class="product-section" id="accessories">
+            <h2>Accessories</h2>
+            <hr />
+            <div class="product-grid">
+                {{#each machines}}
+                    {{> product-block}}
+                {{/each}}
+            </div>
         </div>
-    </div>
-    <div class="product-section">
-        <h2>Tools</h2>
-        <hr />
-        <div class="product-grid" id="tools">
-            {{#each tools}}
-                {{> product-block}}
-            {{/each}}
+        <div class="product-section" id="tools">
+            <h2>Tools</h2>
+            <hr />
+            <div class="product-grid" >
+                {{#each machines}}
+                    {{> product-block}}
+                {{/each}}
+            </div>
         </div>
-    </div>
-    <div class="product-section">
-        <h2>Consumables</h2>
-        <hr />
-        <div class="product-grid" id="consumables">
-            {{#each consumables}}
-                {{> product-block}}
-            {{/each}}
+        <div class="product-section" id="consumables">
+            <h2>Consumables</h2>
+            <hr />
+            <div class="product-grid">
+                {{#each machines}}
+                    {{> product-block}}
+                {{/each}}
+            </div>
         </div>
-    </div>
-</main>
+    </main>
+</div>
+
+
+
