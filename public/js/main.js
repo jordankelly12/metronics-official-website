@@ -12,27 +12,5 @@ $(document).ready(() => {
     $('.btn-equipment').on('click', e => {
         e.preventDefault();
         window.location.pathname = ('/equipment');
-    })
-
-    // Send general inquiry email
-    $('#contact-form').on('submit', e => {
-        e.preventDefault();
-        // Capture form data
-        const formData = Object.fromEntries(new FormData(e.target));
-        console.log(formData)
-
-        // TODO: send data to server.
-
-        // Reset form fields
-        e.target.name.value = '';
-        e.target.email.value = '';
-        e.target.message.value = '';
-    });
-
-    // Equipment page - change active page-link
-    const pageLinks = document.querySelectorAll('.page-link');
-    $('.page-link').on('click', e => {
-        pageLinks.forEach(link => link.classList.remove('active'));
-        e.target.classList.add('active');
     });
 });
