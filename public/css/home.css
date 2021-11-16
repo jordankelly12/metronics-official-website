@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #efefef;
+  color: #0a1931;
+  position: relative;
+}
+
+header {
+  padding: 15px 60px;
+  height: 7%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #185adb;
+  z-index: 1;
+}
+
+main {
+  margin: 0 auto;
+  height: 93%;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=home.css.map */

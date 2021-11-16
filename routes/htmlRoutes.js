@@ -2,7 +2,7 @@ module.exports = app => {
     app.get('/', (req, res) => {
         res.render('home', {
             title: 'Metronics, Inc.',
-            style: 'css/main.css'
+            style: 'css/home.css'
         })
     })
 

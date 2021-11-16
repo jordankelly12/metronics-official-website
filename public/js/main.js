@@ -14,7 +14,7 @@ $(document).ready(() => {
         window.location.pathname = ('/equipment');
     });
 
-    // Modal Open/Close
+    // Toggle service-form modal display
     $('.btn-toggleServiceForm').on('click', e => {
         e.preventDefault();
         const modal = document.getElementById('service-modal');
