@@ -13,4 +13,15 @@ $(document).ready(() => {
         e.preventDefault();
         window.location.pathname = ('/equipment');
     });
+
+    // Modal Open/Close
+    $('.btn-toggleServiceForm').on('click', e => {
+        e.preventDefault();
+        const modal = document.getElementById('service-modal');
+        if (modal.style.display === 'none') {
+            modal.style.display = 'block';
+        } else {
+            modal.style.display = 'none';
+        }
+    });
 });

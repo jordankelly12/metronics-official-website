@@ -1,0 +1,50 @@
+// MODAL
+#service-modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  background: rgba(100, 100, 100, 0.5);
+  .modal-content {
+    margin: 5% auto;
+    padding: 40px 60px;
+    height: 70%;
+    width: 70%;
+    background: $light;
+    border-radius: 50px;
+    h4 {
+      font-size: 1.5rem;
+      color: $blue;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h5 {
+      margin-top: 20px;
+    }
+    p {
+      font-size: 0.85rem;
+    }
+    input {
+      margin-top: 2px;
+      padding: 8px;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .modal-contactInfo {
+      display: grid;
+      grid-template-columns: 50% 40%;
+      gap: 40px;
+      justify-content: center;
+      .address-3-col {
+        display: grid;
+        grid-template-columns: 5fr 1fr 2fr;
+        gap: 5px;
+      }
+    }
+    .modal-problemNote {
+      width: 90%;
+      justify-self: center;
+    }
+  }
+}

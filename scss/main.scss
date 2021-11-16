@@ -16,18 +16,19 @@ body {
   position: relative;
 }
 header {
+  padding: 15px 60px 15px 40px;
+  height: 7vh;
+  width: 100vw;
   position: fixed;
   top: 0;
-  width: 100vw;
   background: $blue;
-  padding: 15px 60px 15px 40px;
   z-index: 1;
 }
 main {
-  max-width: 1250px;
+  margin: 0 auto;
+  height: 93vh;
   position: relative;
   top: 60px;
-  margin: 0 auto;
 }
 img {
   height: auto;
@@ -40,6 +41,7 @@ img {
 @import 'services';
 @import 'equipment';
 @import 'contact';
+@import 'modal';
 
 // Button Styles
 .btn-link {

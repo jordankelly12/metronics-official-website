@@ -1,22 +1,22 @@
 module.exports = app => {
     app.get('/', (req, res) => {
         res.render('home', {
-            title: 'Metronics, Inc. | Home',
-            style: 'css/home.css'
+            title: 'Metronics, Inc.',
+            style: 'css/main.css'
         })
     })
 
     app.get('/about', (req, res) => {
         res.render('about', {
             title: 'Metronics, Inc. | About',
-            style: 'css/about.css'
+            style: 'css/main.css'
         })
     })
 
     app.get('/services', (req, res) => {
         res.render('services', {
             title: 'Metronics, Inc. | Services',
-            style: 'css/services.css'
+            style: 'css/main.css'
         })
     })
 
@@ -31,7 +31,7 @@ module.exports = app => {
                 machines, accessories, tools, consumables,
                 title: 'Metronics, Inc. | Equipment',
                 script: 'js/equipment.js',
-                style: 'css/equipment.css'
+                style: 'css/main.css'
             })
         } catch(err) { console.error(err) }
 
@@ -41,7 +41,7 @@ module.exports = app => {
         res.render('contact', {
             title: 'Metronics, Inc. | Contact',
             script: 'js/contact.js',
-            style: 'css/contact.css'
+            style: 'css/main.css'
         })
     })
 }

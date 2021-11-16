@@ -13,18 +13,19 @@ body {
   position: relative; }
 
 header {
+  padding: 15px 60px 15px 40px;
+  height: 7vh;
+  width: 100vw;
   position: fixed;
   top: 0;
-  width: 100vw;
   background: #185adb;
-  padding: 15px 60px 15px 40px;
   z-index: 1; }
 
 main {
-  max-width: 1250px;
+  margin: 0 auto;
+  height: 93vh;
   position: relative;
-  top: 60px;
-  margin: 0 auto; }
+  top: 60px; }
 
 img {
   height: auto;
@@ -56,8 +57,6 @@ nav div {
       color: #ffc947; }
 
 #home-page {
-  height: 93vh;
-  padding-top: 50px;
   display: grid;
   grid-template-columns: 40% 45vw;
   justify-content: center; }
@@ -95,6 +94,7 @@ nav div {
         #home-page div.left div.logo-div div.logos img {
           max-width: 150px; }
   #home-page div.right {
+    padding-top: 50px;
     position: relative;
     display: flex; }
     #home-page div.right img {
@@ -103,11 +103,9 @@ nav div {
       align-self: flex-end; }
 
 #services-page {
-  height: 93vh;
-  max-width: 1000px;
-  padding-top: 50px;
   display: grid; }
   #services-page h2 {
+    margin-top: 50px;
     font-weight: 100;
     align-self: center; }
   #services-page h3 {
@@ -132,7 +130,6 @@ nav div {
 
 #equipment-page {
   position: relative;
-  max-width: 1250px;
   top: 60px;
   margin: 0 auto; }
 
@@ -211,19 +208,19 @@ nav div {
               cursor: pointer; }
 
 #contact-page {
-  height: 93vh;
-  max-width: 1000px;
-  padding-top: 50px;
   display: grid;
   grid-template-rows: 10% 90%; }
-  #contact-page div.contact-title h2 {
-    padding-bottom: 10px;
-    font-size: 3rem;
-    font-weight: 100;
-    text-align: center; }
-  #contact-page div.contact-title hr {
-    border: 1px solid #0a1931; }
+  #contact-page div.contact-title {
+    margin-top: 50px; }
+    #contact-page div.contact-title h2 {
+      padding-bottom: 10px;
+      font-size: 3rem;
+      font-weight: 100;
+      text-align: center; }
+    #contact-page div.contact-title hr {
+      border: 1px solid #0a1931; }
   #contact-page div.contact-area {
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px; }
@@ -267,6 +264,48 @@ nav div {
         #contact-page div.contact-area div.contact-info div.contact-details div.contact-item p {
           padding: 0;
           align-self: center; }
+
+#service-modal {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  background: rgba(100, 100, 100, 0.5); }
+  #service-modal .modal-content {
+    margin: 5% auto;
+    padding: 40px 60px;
+    height: 70%;
+    width: 70%;
+    background: #efefef;
+    border-radius: 50px; }
+    #service-modal .modal-content h4 {
+      font-size: 1.5rem;
+      color: #185adb;
+      text-align: center;
+      margin-bottom: 20px; }
+    #service-modal .modal-content h5 {
+      margin-top: 20px; }
+    #service-modal .modal-content p {
+      font-size: 0.85rem; }
+    #service-modal .modal-content input {
+      margin-top: 2px;
+      padding: 8px;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      width: 100%; }
+    #service-modal .modal-content .modal-contactInfo {
+      display: grid;
+      grid-template-columns: 50% 40%;
+      gap: 40px;
+      justify-content: center; }
+      #service-modal .modal-content .modal-contactInfo .address-3-col {
+        display: grid;
+        grid-template-columns: 5fr 1fr 2fr;
+        gap: 5px; }
+    #service-modal .modal-content .modal-problemNote {
+      width: 90%;
+      justify-self: center; }
 
 .btn-link {
   padding: 10px;

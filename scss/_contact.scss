@@ -1,12 +1,10 @@
 @import 'config';
 
 #contact-page {
-  height: 93vh;
-  max-width: 1000px;
-  padding-top: 50px;
   display: grid;
   grid-template-rows: 10% 90%;
   div.contact-title {
+    margin-top: 50px;
     h2 {
       padding-bottom: 10px;
       font-size: 3rem;
@@ -18,6 +16,7 @@
     }
   }
   div.contact-area {
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
