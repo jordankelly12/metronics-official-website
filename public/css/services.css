@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #efefef;
+  color: #0a1931;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  padding: 1em 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #185adb;
+}
+nav h1 {
+  color: white;
+}
+nav h1 span {
+  color: #ffc947;
+  font-size: small;
+}
+nav h1:hover {
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  color: white;
+  font-weight: bolder;
+  gap: 5em;
+}
+nav ul li:hover {
+  cursor: pointer;
+  color: #ffc947;
+  transition: all 0.5s ease-out;
+}
+nav ul li.active {
+  color: #ffc947;
+}
+
+.btn-menu {
+  display: none;
+}
+
+.container {
+  margin: 60px auto 0 auto;
+}
+
+.btn-div {
+  display: flex;
+  gap: 50px;
+}
+.btn-div button {
+  height: 65px;
+  width: 140px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #ffc947;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #185adb;
+}
+
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+main {
+  display: grid;
+  grid-template-rows: 2fr 4fr 1fr 1fr;
+  gap: 40px;
+  align-content: center;
+  justify-content: center;
+}
+
+h2 {
+  align-self: center;
+  margin-top: 60px;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.services-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-content: center;
+}
+
+.service-item h3 {
+  font-size: 1.5em;
+  color: #185adb;
+  margin-bottom: 10px;
+}
+.service-item p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.btn-div {
+  align-self: end;
+  justify-content: center;
+}
+
+h4 {
+  align-self: center;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@media screen and (min-width: 1250px) {
+  main {
+    max-width: 75%;
+  }
+}
+
+/*# sourceMappingURL=services.css.map */

@@ -1,45 +1,50 @@
 <header>
     <nav>
-        <div>
-            <h1 id="brand">METRONICS<span>inc</span></h1>
-            <ul>
-                <li class="nav-link">About</li>
-                <li class="nav-link">Services</li>
-                <li class="nav-link">Equipment</li>
-                <li class="nav-link">Contact</li>
-            </ul>
+        <h1 class="brand">METRONICS<span>inc</span></h1>
+        <ul class="nav-menu">
+            <li class="nav-link"><a>About</a></li>
+            <li class="nav-link"><a>Services</a></li>
+            <li class="nav-link"><a>Equipment</a></li>
+            <li class="nav-link"><a>Contact</a></li>
+        </ul>
+        <div class="btn-menu">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
         </div>
     </nav>
 </header>
 
-<main id="home-page">
+<main class="container">
     <!-- Welcome Text Div -->
-    <div class="left">
-        <div class="text-div">
+    <section class="left-column">
+        <div>
             <h2>A/C RECOVERY & RECYCLING</h2>
             <h3>REPAIR SERVICES</h3>
-            <p>Servicing automotive repair facilities in the San Francisco Bay
-                and surrounding areas since 1980.</p>
-        </div>
-        <div class="btn-div">
-            <button class="btn-link btn-toggleServiceForm">Request Service</button>
-            <button class="btn-link btn-equipment">Purchase Equipment</button>
-        </div>
-        <div class="logo-div">
-            <p>Brands we serve:</p>
-            <div class="logos">
-                <img src="img/logos/robinair-logo.png" alt="Robinair Logo"/>
-                <img src="img/logos/snapon-logo-bw.png" alt="Snapon Logo"/>
-                <img src="img/logos/mastercool-logo.png" alt="Mastercool Logo"/>
+            <p>
+                Servicing automotive repair facilities in the San Francisco Bay
+                and surrounding areas since 1980.
+            </p>
+            <div class="btn-div">
+                <button class="btn modalToggle">Request Service</button>
+                <button class="btn equipmentLink">Purchase Equipment</button>
             </div>
         </div>
 
-    </div>
+        <div class="logo-div">
+            <p>Brands we serve:</p>
+            <div class="logos">
+                <img src="img/logos/robinair-logo.png" alt="Robinair logo"/>
+                <img src="img/logos/snapon-logo-bw.png" alt="Snapon logo"/>
+                <img src="img/logos/mastercool-logo.png" alt="Mastercool logo"/>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Image Div -->
-    <div class="right">
+    <section class="right-column">
         <img src="img/robinair_17800C.png" alt="Robinair 17800C Machine"/>
-    </div>
-
-    {{> modal-block}}
+    </section>
 </main>
+
+{{> modal-block}}

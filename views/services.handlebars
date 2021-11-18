@@ -1,20 +1,19 @@
 <header>
     <nav>
-        <div>
-            <h1 id="brand">METRONICS<span>inc</span></h1>
-            <ul>
-                <li class="nav-link">About</li>
-                <li class="nav-link active">Services</li>
-                <li class="nav-link">Equipment</li>
-                <li class="nav-link">Contact</li>
-            </ul>
-        </div>
+        <h1 class="brand">METRONICS<span>inc</span></h1>
+        <ul>
+            <li class="nav-link"><a>About</a></li>
+            <li class="nav-link active"><a>Services</a></li>
+            <li class="nav-link"><a>Equipment</a></li>
+            <li class="nav-link"><a>Contact</a></li>
+        </ul>
     </nav>
 </header>
-<main id="services-page">
+
+<main class="container">
     <h2>Whatever you need, we got you covered...</h2>
 
-    <div class="services-div">
+    <section class="services-div">
         <div class="service-item">
             <h3>MAINTENANCE</h3>
             <p>Regular maintenance is essential to prevent your equipment
@@ -42,14 +41,14 @@
                 your shop then let us help you match your needs with the
                 right tools.</p>
         </div>
-    </div>
+    </section>
 
     <div class="btn-div">
-        <button class="btn-link btn-toggleServiceForm">Request Service</button>
-        <button class="btn-link btn-equipment">Purchase Equipment</button>
+        <button class="btn modalToggle">Request Service</button>
+        <button class="btn equipmentLink">Purchase Equipment</button>
     </div>
 
     <h4>Questions? Call us at: (415) 309-8160</h4>
-
-    {{> modal-block}}
 </main>
+
+{{> modal-block}}

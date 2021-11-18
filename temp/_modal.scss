@@ -1,8 +1,11 @@
+import 'config';
+
 // MODAL
 #service-modal {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
+  top: 7%;
   z-index: 1;
   background: rgba(100, 100, 100, 0.5);
   .modal-content {
@@ -13,7 +16,7 @@
     background: $light;
     border-radius: 50px;
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.5em;
       color: $blue;
       text-align: center;
       margin-bottom: 20px;
@@ -22,9 +25,9 @@
       margin-top: 20px;
     }
     p {
-      font-size: 0.85rem;
+      font-size: 0.85em;
     }
-    input {
+    input, textarea {
       margin-top: 2px;
       padding: 8px;
       border: 1px solid lightgrey;
@@ -39,7 +42,7 @@
       .address-3-col {
         display: grid;
         grid-template-columns: 5fr 1fr 2fr;
-        gap: 5px;
+        gap: 2px;
       }
     }
     .modal-problemNote {

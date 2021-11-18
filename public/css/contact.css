@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #efefef;
+  color: #0a1931;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  padding: 1em 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #185adb;
+}
+nav h1 {
+  color: white;
+}
+nav h1 span {
+  color: #ffc947;
+  font-size: small;
+}
+nav h1:hover {
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  color: white;
+  font-weight: bolder;
+  gap: 5em;
+}
+nav ul li:hover {
+  cursor: pointer;
+  color: #ffc947;
+  transition: all 0.5s ease-out;
+}
+nav ul li.active {
+  color: #ffc947;
+}
+
+.btn-menu {
+  display: none;
+}
+
+.container {
+  margin: 60px auto 0 auto;
+}
+
+.btn-div {
+  display: flex;
+  gap: 50px;
+}
+.btn-div button {
+  height: 65px;
+  width: 140px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #ffc947;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #185adb;
+}
+
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+main {
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+
+.contact-title {
+  margin-top: 50px;
+}
+.contact-title h2 {
+  padding-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+.contact-title hr {
+  border: 1px solid #0a1931;
+}
+
+.contact-area {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.contact-area p {
+  padding: 50px 0 25px 0;
+  font-size: 1.1rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 100;
+  width: 100%;
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
+}
+.contact-form textarea {
+  height: 250px;
+}
+.contact-form #contact-btn {
+  padding: 10px 20px;
+  background: #ffc947;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: fit-content;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.contact-form #contact-btn:hover {
+  cursor: pointer;
+}
+
+.contact-info div.contact-details {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+.contact-info div.contact-details div.contact-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.contact-info div.contact-details div.contact-item p {
+  padding: 0;
+  align-self: center;
+}
+
+@media screen and (min-width: 1250px) {
+  main {
+    max-width: 75%;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

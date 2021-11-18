@@ -1,11 +1,11 @@
-@import 'config';
+@import 'scss/config';
 
 #home-page {
   display: grid;
-  grid-template-columns: 40% 45vw;
+  grid-template-columns: 50% 50%;
   justify-content: center;
   div.left {
-    padding-top: 50px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -15,7 +15,7 @@
     }
     h3 {
       color: $blue;
-      font-size: 3.2em;
+      font-size: 4.5em;
       margin: 15px 0;
     }
     p {

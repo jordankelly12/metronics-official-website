@@ -1,0 +1,103 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: $light;
+  color: $dark;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  padding: 1em 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $blue;
+
+  h1 {
+    color: white;
+
+    span {
+      color: $yellow;
+      font-size: small;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    font-weight: bolder;
+    gap: 5em;
+
+    li {
+      &:hover {
+        cursor: pointer;
+        color: $yellow;
+        @include easeOut;
+      }
+
+      &.active {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.btn-menu {
+  display: none;
+}
+
+.container {
+  margin: 60px auto 0 auto;
+}
+
+.btn-div {
+  display: flex;
+  gap: 50px;
+
+  button {
+    height: 65px;
+    width: 140px;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: $yellow;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+
+  &:hover {
+    cursor: pointer;
+    background: $blue;
+  }
+}

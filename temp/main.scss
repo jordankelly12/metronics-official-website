@@ -1,4 +1,4 @@
-@import 'config';
+@import 'scss/config';
 
 // General Styles
 * {
@@ -16,9 +16,9 @@ body {
   position: relative;
 }
 header {
-  padding: 15px 60px 15px 40px;
-  height: 7vh;
-  width: 100vw;
+  padding: 15px 60px;
+  height: 7%;
+  width: 100%;
   position: fixed;
   top: 0;
   background: $blue;
@@ -26,7 +26,8 @@ header {
 }
 main {
   margin: 0 auto;
-  height: 93vh;
+  height: 93%;
+  width: 1000px;
   position: relative;
   top: 60px;
 }
@@ -36,12 +37,12 @@ img {
   object-fit: contain;
 }
 
-@import 'navbar';
+@import 'temp/navbar';
 @import 'home';
-@import 'services';
-@import 'equipment';
-@import 'contact';
-@import 'modal';
+@import 'temp/services';
+@import 'temp/equipment';
+@import 'temp/contact';
+@import 'temp/modal';
 
 // Button Styles
 .btn-link {

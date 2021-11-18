@@ -1,19 +1,17 @@
 <header>
     <nav>
-        <div>
-            <h1 id="brand">METRONICS<span>inc</span></h1>
-            <ul>
-                <li class="nav-link">About</li>
-                <li class="nav-link">Services</li>
-                <li class="nav-link">Equipment</li>
-                <li class="nav-link active">Contact</li>
-            </ul>
-        </div>
+        <h1 class="brand">METRONICS<span>inc</span></h1>
+        <ul>
+            <li class="nav-link"><a>About</a></li>
+            <li class="nav-link"><a>Services</a></li>
+            <li class="nav-link"><a>Equipment</a></li>
+            <li class="nav-link active"><a>Contact</a></li>
+        </ul>
     </nav>
 </header>
 
-<main>
-    <div id="contact-page">
+<main class="container">
+    <div>
         <div class="contact-title">
             <h2>CONTACT</h2>
             <hr />
@@ -35,8 +33,8 @@
                     Please use the links below.</p>
 
                 <div class="btn-div">
-                    <button class="btn-link btn-toggleServiceForm">Request Service</button>
-                    <button class="btn-link btn-equipment">Purchase Equipment</button>
+                    <button class="btn modalToggle">Request Service</button>
+                    <button class="btn equipmentLink">Purchase Equipment</button>
                 </div>
 
                 <div class="contact-details">
@@ -64,7 +62,7 @@
                 </div>
             </div>
         </div>
-
-        {{> modal-block}}
     </div>
 </main>
+
+{{> modal-block}}

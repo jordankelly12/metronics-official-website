@@ -1,0 +1,62 @@
+@import 'config';
+@import 'global';
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+
+main {
+  display: grid;
+  grid-template-rows: 2fr 4fr 1fr 1fr;
+  gap: 40px;
+  align-content: center;
+  justify-content: center;
+}
+
+h2 {
+  align-self: center;
+  margin-top: 60px;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.services-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-content: center;
+}
+
+.service-item {
+  h3 {
+    font-size: 1.5em;
+    color: $blue;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+}
+
+.btn-div {
+  align-self: end;
+  justify-content: center;
+}
+
+h4 {
+  align-self: center;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+// Media Queries
+@media screen and (min-width: 1250px) {
+  main {
+    max-width: 75%;
+  }
+}
