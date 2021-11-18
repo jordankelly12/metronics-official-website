@@ -1,71 +1,87 @@
 <header>
     <nav>
         <h1 class="brand">METRONICS<span>inc</span></h1>
-        <ul>
+
+        <ul class="nav-menu">
             <li class="nav-link"><a>About</a></li>
             <li class="nav-link"><a>Services</a></li>
             <li class="nav-link active"><a>Equipment</a></li>
             <li class="nav-link"><a>Contact</a></li>
         </ul>
+
+        <div class="btn-menu">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
     </nav>
 </header>
 
 
 <aside>
     <div class="callout">
-        <p>Give us a call to inquire about pricing, financing options,
-            and to place an order.</p>
-        <h4>(415) 309-8160</h4>
+        <p>
+            Give us a call to inquire about pricing, financing options,
+            and to place an order.
+        </p>
+        <h4>(415)<br/> 309-8160</h4>
     </div>
     <div class="side-navbar">
         <ul>
-            <li><a class="page-anchor active"
-                   href="#machines">A/C Machines</a></li>
-            <li><a class="page-anchor"
-                   href="#accessories">Accessories</a></li>
-            <li><a class="page-anchor"
-                   href="#tools">Tools</a></li>
-            <li><a class="page-anchor"
-                   href="#consumables">Consumables</a></li>
+            <li>
+                <a class="page-anchor active" href="#machines">A/C Machines</a>
+            </li>
+            <li>
+                <a class="page-anchor" href="#accessories">Accessories</a>
+            </li>
+            <li>
+                <a class="page-anchor" href="#tools">Tools</a>
+            </li>
+            <li>
+                <a class="page-anchor" href="#consumables">Consumables</a>
+            </li>
         </ul>
     </div>
 </aside>
 
-<main>
-    <div class="product-section"
-         id="machines">
+<main class="container">
+    <div class="product-section" id="machines">
         <h2>A/C Machines</h2>
         <hr/>
+
         <div class="product-grid">
             {{#each machines}}
                 {{> product-block}}
             {{/each}}
         </div>
     </div>
-    <div class="product-section"
-         id="accessories">
+
+    <div class="product-section" id="accessories">
         <h2>Accessories</h2>
         <hr/>
+
         <div class="product-grid">
             {{#each machines}}
                 {{> product-block}}
             {{/each}}
         </div>
     </div>
-    <div class="product-section"
-         id="tools">
+
+    <div class="product-section" id="tools">
         <h2>Tools</h2>
         <hr/>
+
         <div class="product-grid">
             {{#each machines}}
                 {{> product-block}}
             {{/each}}
         </div>
     </div>
-    <div class="product-section"
-         id="consumables">
+
+    <div class="product-section" id="consumables">
         <h2>Consumables</h2>
         <hr/>
+
         <div class="product-grid">
             {{#each machines}}
                 {{> product-block}}

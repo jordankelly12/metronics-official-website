@@ -2,7 +2,6 @@
    - Global Styles
    - Page Layout
    - Typography Styles
-   - Component Styles
    - Media Queries
    */
 /* =================
@@ -107,7 +106,7 @@ img {
   padding: 0 5%;
   display: grid;
   grid-template-rows: 2fr 4fr 1fr 1fr;
-  gap: 2vh;
+  gap: 3vh;
   align-content: center;
   justify-content: center;
   max-width: 1200px;
@@ -116,7 +115,7 @@ img {
 .services-div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3vh;
+  gap: 2.5vh;
   align-content: center;
 }
 
