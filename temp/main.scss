@@ -1,4 +1,4 @@
-@import 'config';
+@import 'scss/config';
 
 // General Styles
 * {
@@ -37,12 +37,12 @@ img {
   object-fit: contain;
 }
 
-@import 'navbar';
+@import 'temp/navbar';
 @import 'home';
-@import 'services';
-@import 'equipment';
-@import 'contact';
-@import 'modal';
+@import 'temp/services';
+@import 'temp/equipment';
+@import 'temp/contact';
+@import 'temp/modal';
 
 // Button Styles
 .btn-link {

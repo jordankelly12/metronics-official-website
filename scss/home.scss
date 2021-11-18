@@ -1,8 +1,147 @@
 @import 'config';
-@import 'general';
 
-main {
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+
+/* =================
+   GLOBAL STYLES
+   ================= */
+@import 'global';
+
+/* =================
+   PAGE LAYOUT
+   ================= */
+.container {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
   justify-content: center;
+  max-width: 1300px;
 }
+
+section {
+  padding: 2em;
+}
+
+.left-column {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.right-column {
+
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* =================
+   TYPOGRAPHY STYLES
+   ================= */
+h2 {
+  margin-top: 40px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 100;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: clamp(3rem, 4.5vw, 4rem);
+  font-weight: 700;
+  color: $blue;
+}
+
+p {
+  margin: 50px 0;
+  padding-right: 10%;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.logo-div p {
+  font-size: 0.8em;
+  font-weight: 100;
+  font-style: italic;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+  nav ul {
+    gap: 3em;
+  }
+
+  .container {
+    max-width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+  }
+
+  h2, h3, p {
+    align-self: center;
+    text-align: center;
+  }
+
+  p {
+    padding: 0 5em;
+  }
+
+  .btn-div {
+    justify-content: center;
+  }
+
+  .logo-div {
+    display: none;
+  }
+
+  .right-column {
+    align-self: center;
+    width: min(500px, 85%);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  section {
+    padding: 2em 0;
+  }
+
+  .right-column {
+    display: none;
+  }
+
+  p {
+    padding: 0 1em;
+  }
+
+  .btn-div {
+    gap: 25px;
+  }
+
+  .logo-div {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2% 5%;
+    p {
+      text-align: start;
+    }
+  }
+
+  @import 'nav-mobile';
+}
+
+// Breakpoints: 750px, 1000px, 1300px
