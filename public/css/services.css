@@ -1,3 +1,13 @@
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+/* =================
+   GLOBAL STYLES
+   ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -90,59 +100,146 @@ img {
   background: #185adb;
 }
 
-/* TABLE OF CONTENTS
-   - Global Styles
-   - Page Layout
-   - Typography Styles
-   - Component Styles
-   - Media Queries
-   */
-main {
+/* =================
+   PAGE LAYOUT
+   ================= */
+.container {
+  padding: 0 5%;
   display: grid;
   grid-template-rows: 2fr 4fr 1fr 1fr;
-  gap: 40px;
+  gap: 2vh;
   align-content: center;
   justify-content: center;
-}
-
-h2 {
-  align-self: center;
-  margin-top: 60px;
-  font-size: 2em;
-  font-weight: 100;
+  max-width: 1200px;
 }
 
 .services-div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
+  gap: 3vh;
   align-content: center;
 }
 
-.service-item h3 {
-  font-size: 1.5em;
-  color: #185adb;
-  margin-bottom: 10px;
-}
-.service-item p {
-  font-size: 1.2em;
-  line-height: 1.5;
+.btn-div {
+  align-self: center;
+  justify-content: center;
 }
 
-.btn-div {
-  align-self: end;
-  justify-content: center;
+/* =================
+   TYPOGRAPHY STYLES
+   ================= */
+h2 {
+  align-self: center;
+  margin-top: 7%;
+  font-size: clamp(1.1rem, 4vw, 2rem);
+  font-weight: 100;
+}
+
+h3 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #185adb;
+  margin-bottom: 1vh;
 }
 
 h4 {
   align-self: center;
-  font-size: 1.5em;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   text-align: center;
 }
 
-@media screen and (min-width: 1250px) {
-  main {
-    max-width: 75%;
+p {
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  line-height: 1.5;
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+  nav ul {
+    gap: 3em;
+  }
+}
+@media screen and (max-width: 750px) {
+  .btn-menu {
+    display: block;
+    z-index: 2;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+  .btn-menu.close {
+    transform: rotate(180deg);
+  }
+  .btn-menu.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 13px);
+    background: #ffc947;
+  }
+  .btn-menu.close .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+  .btn-menu.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(-1px, -7px);
+    background: #ffc947;
+  }
+
+  .btn-line {
+    width: 30px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    transition: all 0.5s ease-out;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 15vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: #060e1c;
+    list-style-type: none;
+    padding: 0 0 10% 0;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out;
+  }
+  .nav-menu.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .nav-link a {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 5%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 4vh;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .services-div {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 3vh;
+    justify-content: center;
+  }
+
+  .btn-div {
+    gap: 1.5rem;
   }
 }
 

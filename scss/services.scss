@@ -1,5 +1,4 @@
 @import 'config';
-@import 'global';
 /* TABLE OF CONTENTS
    - Global Styles
    - Page Layout
@@ -8,55 +7,95 @@
    - Media Queries
    */
 
-main {
+/* =================
+   GLOBAL STYLES
+   ================= */
+@import 'global';
+
+/* =================
+   PAGE LAYOUT
+   ================= */
+.container {
+  padding: 0 5%;
   display: grid;
   grid-template-rows: 2fr 4fr 1fr 1fr;
-  gap: 40px;
+  //gap: clamp(5%, 2vh, 3rem);
+  gap: 2vh;
   align-content: center;
   justify-content: center;
-}
-
-h2 {
-  align-self: center;
-  margin-top: 60px;
-  font-size: 2em;
-  font-weight: 100;
+  max-width: 1200px;
 }
 
 .services-div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
+  gap: 3vh;
   align-content: center;
 }
 
-.service-item {
-  h3 {
-    font-size: 1.5em;
-    color: $blue;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 1.2em;
-    line-height: 1.5;
-  }
+.btn-div {
+  align-self: center;
+  justify-content: center;
 }
 
-.btn-div {
-  align-self: end;
-  justify-content: center;
+/* =================
+   TYPOGRAPHY STYLES
+   ================= */
+h2 {
+  align-self: center;
+  margin-top: 7%;
+  font-size: clamp(1.1rem, 4vw, 2rem);
+  font-weight: 100;
+}
+
+h3 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: $blue;
+  margin-bottom: 1vh;
 }
 
 h4 {
   align-self: center;
-  font-size: 1.5em;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   text-align: center;
 }
 
-// Media Queries
-@media screen and (min-width: 1250px) {
-  main {
-    max-width: 75%;
+p {
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  line-height: 1.5;
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+  nav ul {
+    gap: 3em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  @import 'nav-mobile';
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 5%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 4vh;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .services-div {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 3vh;
+    justify-content: center;
+  }
+
+  .btn-div {
+    gap: 1.5rem;
   }
 }

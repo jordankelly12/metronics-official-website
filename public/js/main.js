@@ -14,7 +14,7 @@ $(document).ready(() => {
         window.location.pathname = ('/equipment');
     });
 
-    // Toggle navigation menu for mobile
+    // Toggle navigation menu for small screens
     let showMenu = false;
     $('.btn-menu').on('click', e => {
         e.preventDefault();
