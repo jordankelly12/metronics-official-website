@@ -1,36 +1,29 @@
 <!-- Service Modal -->
 <div class="modal" id="service-modal" style="display:none;">
     <div class="modal-content">
-        <h4>Service Request</h4>
-        <form class="modal-form">
-            <div class="modal-contactInfo">
-                <div>
-                    <div>
-                        <h5>Business Name</h5>
-                        <input name="businessName" />
-                    </div>
+        <h4>Service Request<span class="close modalToggle">&times;</span></h4>
 
+        <form id="modal-form">
+            <div class="modal-contactInfo">
+                <div class="input">
+                    <h5>Business Info</h5>
                     <div>
-                        <h5>Address</h5>
-                        <input name="street1" placeholder="Street address" />
-                        <input name="street2" placeholder="Building or unit #" />
-                        <div class="address-3-col">
-                            <input name="city" placeholder="City" />
-                            <input name="state" placeholder="State" value="CA" style="text-align:center;" />
-                            <input name="zipcode" placeholder="Zip code" />
-                        </div>
+                        <input name="businessName" placeholder="Business Name"/>
+                        <input name="contactName" placeholder="Contact Name"/>
+                        <input name="phone" placeholder="Phone #"/>
                     </div>
                 </div>
 
-                <div>
+                <div class="input">
+                    <h5>Address</h5>
                     <div>
-                        <h5>Contact Name</h5>
-                        <input name="contactName" />
-                    </div>
-
-                    <div>
-                        <h5>Phone #</h5>
-                        <input name="phone" />
+                        <input name="street1" placeholder="Street address"/>
+                        <input name="street2" placeholder="Building or unit #"/>
+                        <div class="address">
+                            <input name="city" placeholder="City"/>
+                            <input name="state" placeholder="State" value="CA" style="text-align:center;"/>
+                            <input name="zipcode" placeholder="Zip code"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,8 +35,7 @@
             </div>
 
             <div>
-                <button class="btn-submitService" type="submit">Send</button>
-                <button class="btn-toggleServiceForm">Cancel</button>
+                <button class="btn" type="submit">Send</button>
             </div>
         </form>
     </div>
