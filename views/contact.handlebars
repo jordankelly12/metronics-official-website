@@ -1,64 +1,76 @@
 <header>
     <nav>
         <h1 class="brand">METRONICS<span>inc</span></h1>
-        <ul>
+
+        <ul class="nav-menu">
             <li class="nav-link"><a>About</a></li>
             <li class="nav-link"><a>Services</a></li>
             <li class="nav-link"><a>Equipment</a></li>
             <li class="nav-link active"><a>Contact</a></li>
         </ul>
+
+        <div class="btn-menu">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
     </nav>
 </header>
 
 <main class="container">
-    <div>
-        <div class="contact-title">
-            <h2>CONTACT</h2>
-            <hr />
+    <div class="contact-title">
+        <h2>CONTACT</h2>
+        <hr/>
+    </div>
+
+    <div class="contact-area">
+        <div class="contact-form">
+            <p class="instructions">For general inquiries, please fill out the contact form below.</p>
+            <form id="contact-form">
+                <input type="text"
+                       name="name"
+                       placeholder="Your name"/>
+                <input type="text"
+                       name="email"
+                       placeholder="Email or phone #"/>
+                <textarea name="message"
+                          placeholder="Message"></textarea>
+                <button class="btn-contact"
+                        type="submit">Send
+                </button>
+            </form>
         </div>
 
-        <div class="contact-area">
-            <div class="contact-form">
-                <p>For general inquiries, please fill out the contact form below.</p>
-                <form id="contact-form">
-                    <input type="text" name="name" placeholder="Your name" />
-                    <input type="text" name="email" placeholder="Email or phone #" />
-                    <textarea name="message" placeholder="Message"></textarea>
-                    <button id="contact-btn" type="submit">Send</button>
-                </form>
+        <div class="contact-info">
+            <p class="instructions">Need to request service for your machines or order equipment?
+                Please use the links below.</p>
+
+            <div class="btn-div">
+                <button class="btn modalToggle">Request Service</button>
+                <button class="btn equipmentLink">Purchase Equipment</button>
             </div>
 
-            <div class="contact-info">
-                <p>Need to request service for your machines or order equipment?
-                    Please use the links below.</p>
-
-                <div class="btn-div">
-                    <button class="btn modalToggle">Request Service</button>
-                    <button class="btn equipmentLink">Purchase Equipment</button>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>
+                        <strong>Metronics, Inc.</strong><br/>
+                        Benicia, CA
+                    </p>
                 </div>
 
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt fa-2x"></i>
-                        <p>
-                            <strong>Metronics, Inc.</strong><br/>
-                            Benicia, CA
-                        </p>
-                    </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt fa-2x"></i>
+                    <p>
+                        <strong>(415) 309-8160</strong>
+                    </p>
+                </div>
 
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt fa-2x"></i>
-                        <p>
-                            <strong>(415) 309-8160</strong>
-                        </p>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope fa-2x"></i>
-                        <p>
-                            <strong>metronics01@yahoo.com</strong>
-                        </p>
-                    </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <p>
+                        <strong>metronics01@yahoo.com</strong>
+                    </p>
                 </div>
             </div>
         </div>

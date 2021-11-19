@@ -1,5 +1,4 @@
 @import 'config';
-@import 'global';
 /* TABLE OF CONTENTS
    - Global Styles
    - Page Layout
@@ -8,89 +7,185 @@
    - Media Queries
    */
 
-main {
-  display: grid;
-  grid-template-rows: 10% 90%;
+/* =================
+   GLOBAL STYLES
+   ================= */
+@import 'global';
+
+/* =================
+   PAGE LAYOUT
+   ================= */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 1300px;
+  padding: 0 5%;
 }
 
 .contact-title {
   margin-top: 50px;
-  h2 {
-    padding-bottom: 10px;
-    font-size: 3rem;
-    font-weight: 100;
-    text-align: center;
-  }
-  hr {
-    border: 1px solid $dark;
-  }
+}
+
+.contact-form, .contact-area {
+  padding: 0 2%;
 }
 
 .contact-area {
   margin-top: 30px;
+  display: flex;
+  gap: 7%;
+  & > div {
+    width: 50%;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  width: 100%;
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 14rem;
+}
+
+.contact-details {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.contact-item {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  p {
-    padding: 50px 0 25px 0;
-    font-size: 1.1rem;
+  grid-template-columns: 10% 50%;
+  gap: 5vw;
+}
+
+/* =================
+   TYPOGRAPHY STYLES
+   ================= */
+h2 {
+  padding-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.instructions {
+  padding: 2.5rem 0 2rem 0;
+  font-size: clamp(1.5rem, 1.3vw, 1.7rem);
+}
+
+.contact-item p {
+  padding: 0;
+  align-self: center;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+/* =================
+   COMPONENT STYLES
+   ================= */
+hr {
+  border: 1px solid $dark;
+}
+
+.btn-contact {
+  padding: 10px 20px;
+  background: $yellow;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: fit-content;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
   }
 }
 
-.contact-form {
-  form {
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+  nav ul {
+    gap: 3em;
+  }
+
+  .container {
+    padding-bottom: 4rem;
+  }
+
+  .contact-area {
+    margin-top: 30px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-flow: column-reverse wrap;
+    gap: 5rem;
+    align-content: center;
+    & > div {
+      width: 80%;
+    }
   }
-  input, textarea {
-    padding: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 100;
-    width: 100%;
-    border: 0.5px solid lightgrey;
-    border-radius: 5px;
+
+  .contact-details {
+    gap: 2rem;
   }
-  textarea {
-    height: 250px;
+
+  .contact-item {
+    justify-content: center;
   }
-  #contact-btn {
-    padding: 10px 20px;
-    background: $yellow;
+
+  .instructions {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .btn-div {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 95%;
+    padding: 0 0 2rem 0;
+  }
+
+  .instructions {
+    padding: 0 0 1.5rem 0;
     font-size: 1.2rem;
-    font-weight: 500;
-    width: fit-content;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    &:hover {
-      cursor: pointer;
-    }
   }
-}
 
-.contact-info {
-  div.contact-details {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  .btn-div {
+    gap: 1rem;
+  }
+
+  .contact-item {
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .contact-form, .contact-area {
+    padding: 0;
+  }
+
+  .contact-form {
     width: 100%;
-    div.contact-item {
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-      p {
-        padding: 0;
-        align-self: center;
-      }
-    }
   }
-}
-
-// Media Queries
-@media screen and (min-width: 1250px) {
-  main {
-    max-width: 75%;
-  }
+  @import 'nav-mobile';
 }

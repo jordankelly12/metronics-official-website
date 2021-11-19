@@ -1,0 +1,51 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  padding: 1em 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $blue;
+
+  h1 {
+    color: white;
+
+    span {
+      color: $yellow;
+      font-size: small;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    font-weight: bolder;
+    gap: 5em;
+
+    li {
+      &:hover {
+        cursor: pointer;
+        color: $yellow;
+        @include easeOut;
+      }
+
+      &.active {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.btn-menu {
+  display: none;
+}

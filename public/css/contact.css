@@ -1,3 +1,13 @@
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+/* =================
+   GLOBAL STYLES
+   ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +22,38 @@ body {
   font-family: "Open Sans", sans-serif;
   background: #efefef;
   color: #0a1931;
+}
+
+.container {
+  margin: 60px auto 0 auto;
+}
+
+.btn-div {
+  display: flex;
+  gap: 50px;
+}
+.btn-div button {
+  height: 65px;
+  width: 140px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #ffc947;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #185adb;
 }
 
 header {
@@ -58,92 +100,180 @@ nav ul li.active {
   display: none;
 }
 
-.container {
-  margin: 60px auto 0 auto;
+.modal {
+  background: gray;
+  position: absolute;
+  top: 60px;
+  height: 175%;
 }
 
-.btn-div {
-  display: flex;
-  gap: 50px;
-}
-.btn-div button {
-  height: 65px;
-  width: 140px;
+.modal-content {
+  margin: 2% 5%;
+  padding: 3%;
+  background: #efefef;
+  border-radius: 25px;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-.btn {
-  padding: 10px 20px;
-  background: #ffc947;
-  font-size: 1.2em;
-  font-weight: 600;
-  color: white;
-  border: none;
-  border-radius: 10px;
-}
-.btn:hover {
-  cursor: pointer;
-  background: #185adb;
-}
-
-/* TABLE OF CONTENTS
-   - Global Styles
-   - Page Layout
-   - Typography Styles
-   - Component Styles
-   - Media Queries
-   */
-main {
+.modal-contactInfo {
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-columns: 4fr 5fr;
+  gap: 2%;
+}
+
+.input > div {
+  display: flex;
+  flex-flow: column;
+  gap: 4px;
+}
+
+.address {
+  display: grid;
+  grid-template-columns: 4fr 1fr 2fr;
+  gap: 4px;
+}
+
+.modal h4 {
+  text-align: center;
+  color: #185adb;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal h5, .modal p {
+  font-size: 1.1rem;
+  margin: 5px;
+}
+
+.submitRequest {
+  margin-right: 2rem;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .modal h4 {
+    text-align: start;
+  }
+
+  .modal-contactInfo {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+  }
+
+  #modal-form {
+    gap: 1rem;
+  }
+
+  .modal input {
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  .modal h5, .modal p {
+    font-size: 1rem;
+    margin: 5px;
+  }
+}
+/* =================
+   PAGE LAYOUT
+   ================= */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 1300px;
+  padding: 0 5%;
 }
 
 .contact-title {
   margin-top: 50px;
 }
-.contact-title h2 {
-  padding-bottom: 10px;
-  font-size: 3rem;
-  font-weight: 100;
-  text-align: center;
-}
-.contact-title hr {
-  border: 1px solid #0a1931;
+
+.contact-form, .contact-area {
+  padding: 0 2%;
 }
 
 .contact-area {
   margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  display: flex;
+  gap: 7%;
 }
-.contact-area p {
-  padding: 50px 0 25px 0;
-  font-size: 1.1rem;
+.contact-area > div {
+  width: 50%;
 }
 
-.contact-form form {
+form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.contact-form input, .contact-form textarea {
+
+input, textarea {
   padding: 10px;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 100;
   width: 100%;
   border: 0.5px solid lightgrey;
   border-radius: 5px;
 }
-.contact-form textarea {
-  height: 250px;
+
+textarea {
+  height: 14rem;
 }
-.contact-form #contact-btn {
+
+.contact-details {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 10% 50%;
+  gap: 5vw;
+}
+
+/* =================
+   TYPOGRAPHY STYLES
+   ================= */
+h2 {
+  padding-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.instructions {
+  padding: 2.5rem 0 2rem 0;
+  font-size: clamp(1.5rem, 1.3vw, 1.7rem);
+}
+
+.contact-item p {
+  padding: 0;
+  align-self: center;
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+/* =================
+   COMPONENT STYLES
+   ================= */
+hr {
+  border: 1px solid #0a1931;
+}
+
+.btn-contact {
   padding: 10px 20px;
   background: #ffc947;
   font-size: 1.2rem;
@@ -153,29 +283,136 @@ main {
   border: none;
   border-radius: 10px;
 }
-.contact-form #contact-btn:hover {
+.btn-contact:hover {
   cursor: pointer;
 }
 
-.contact-info div.contact-details {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-}
-.contact-info div.contact-details div.contact-item {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-}
-.contact-info div.contact-details div.contact-item p {
-  padding: 0;
-  align-self: center;
-}
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+  nav ul {
+    gap: 3em;
+  }
 
-@media screen and (min-width: 1250px) {
-  main {
-    max-width: 75%;
+  .container {
+    padding-bottom: 4rem;
+  }
+
+  .contact-area {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    gap: 5rem;
+    align-content: center;
+  }
+  .contact-area > div {
+    width: 80%;
+  }
+
+  .contact-details {
+    gap: 2rem;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .instructions {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .btn-div {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 95%;
+    padding: 0 0 2rem 0;
+  }
+
+  .instructions {
+    padding: 0 0 1.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  .btn-div {
+    gap: 1rem;
+  }
+
+  .contact-item {
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .contact-form, .contact-area {
+    padding: 0;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .btn-menu {
+    display: block;
+    z-index: 2;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+  .btn-menu.close {
+    transform: rotate(180deg);
+  }
+  .btn-menu.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 13px);
+    background: #ffc947;
+  }
+  .btn-menu.close .btn-line:nth-child(2) {
+    opacity: 0;
+  }
+  .btn-menu.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(-1px, -7px);
+    background: #ffc947;
+  }
+
+  .btn-line {
+    width: 30px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    transition: all 0.5s ease-out;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 15vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: #060e1c;
+    list-style-type: none;
+    padding: 0 0 10% 0;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out;
+  }
+  .nav-menu.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .nav-link a {
+    font-size: 2rem;
   }
 }
 

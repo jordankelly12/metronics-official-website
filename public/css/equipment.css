@@ -24,6 +24,38 @@ body {
   color: #0a1931;
 }
 
+.container {
+  margin: 60px auto 0 auto;
+}
+
+.btn-div {
+  display: flex;
+  gap: 50px;
+}
+.btn-div button {
+  height: 65px;
+  width: 140px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #ffc947;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #185adb;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -68,38 +100,90 @@ nav ul li.active {
   display: none;
 }
 
-.container {
-  margin: 60px auto 0 auto;
+.modal {
+  background: gray;
+  position: absolute;
+  top: 60px;
+  height: 175%;
 }
 
-.btn-div {
+.modal-content {
+  margin: 2% 5%;
+  padding: 3%;
+  background: #efefef;
+  border-radius: 25px;
+}
+
+.modal-contactInfo {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  gap: 2%;
+}
+
+.input > div {
   display: flex;
-  gap: 50px;
-}
-.btn-div button {
-  height: 65px;
-  width: 140px;
+  flex-flow: column;
+  gap: 4px;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
+.address {
+  display: grid;
+  grid-template-columns: 4fr 1fr 2fr;
+  gap: 4px;
 }
 
-.btn {
-  padding: 10px 20px;
-  background: #ffc947;
-  font-size: 1.2em;
-  font-weight: 600;
-  color: white;
-  border: none;
-  border-radius: 10px;
+.modal h4 {
+  text-align: center;
+  color: #185adb;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
-.btn:hover {
+
+.modal h5, .modal p {
+  font-size: 1.1rem;
+  margin: 5px;
+}
+
+.submitRequest {
+  margin-right: 2rem;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
   cursor: pointer;
-  background: #185adb;
 }
 
+@media screen and (max-width: 750px) {
+  .modal h4 {
+    text-align: start;
+  }
+
+  .modal-contactInfo {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+  }
+
+  #modal-form {
+    gap: 1rem;
+  }
+
+  .modal input {
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  .modal h5, .modal p {
+    font-size: 1rem;
+    margin: 5px;
+  }
+}
 /* =================
    PAGE LAYOUT
    ================= */
@@ -210,6 +294,7 @@ h3 {
 
 h4 {
   font-size: clamp(1rem, 2.5vw, 1.6rem);
+  line-height: 1.5;
   margin-top: 20px;
 }
 

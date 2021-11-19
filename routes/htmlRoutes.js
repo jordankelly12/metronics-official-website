@@ -9,7 +9,7 @@ module.exports = app => {
     app.get('/about', (req, res) => {
         res.render('about', {
             title: 'Metronics, Inc. | About',
-            style: 'css/main.css'
+            style: 'css/about.css'
         })
     })
 
