@@ -10,6 +10,11 @@
   background: rgba(gray, 0.9);
   overflow-y: scroll;
 }
+.modal-form {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+}
 .modal-content {
   position: relative;
   top: 20px;

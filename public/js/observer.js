@@ -10,10 +10,10 @@ $(document).ready(() => {
                     case 'machines':
                         pageAnchors[0].classList.add('active');
                         break;
-                    case 'accessories':
+                    case 'tools':
                         pageAnchors[1].classList.add('active');
                         break;
-                    case 'tools':
+                    case 'accessories':
                         pageAnchors[2].classList.add('active');
                         break;
                     case 'consumables':

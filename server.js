@@ -18,7 +18,6 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('/build'));
 }
 
-require('./routes/apiRoutes.js')(app);
 require('./routes/htmlRoutes.js')(app);
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/metronicsDB')
