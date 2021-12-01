@@ -1,0 +1,58 @@
+@import 'scss/config';
+
+#home-page {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  div.left {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    h2 {
+      font-weight: 100;
+      font-size: 2em;
+    }
+    h3 {
+      color: $blue;
+      font-size: 4.5em;
+      margin: 15px 0;
+    }
+    p {
+      margin-top: 25px;
+      margin-bottom: 40px;
+      max-width: 450px;
+    }
+    div.logo-div {
+      width: 45%;
+      position: absolute;
+      bottom: 10px;
+      p {
+        margin-bottom: 10px;
+        font-size: .8rem;
+        font-weight: 100;
+        color: gray;
+        font-style: italic;
+      }
+      div.logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-width: 60%;
+        img {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+  div.right {
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    img {
+      margin-bottom: 10px;
+      max-height: 80vh;
+      align-self: flex-end;
+    }
+  }
+}

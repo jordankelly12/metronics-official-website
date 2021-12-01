@@ -1,0 +1,8 @@
+$blue: #185adb;
+$yellow: #ffc947;
+$light: #efefef;
+$dark: #0a1931;
+
+@mixin easeOut {
+  transition: all .5s ease-out;
+}
