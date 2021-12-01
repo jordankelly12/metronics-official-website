@@ -1,12 +1,13 @@
 <!-- Service Modal -->
-<div class="modal" id="service-modal" style="display:none;">
+<div id="service-modal" style="display:none;">
     <div class="modal-content">
-        <h4>Service Request<span class="close modalToggle">&times;</span></h4>
+        <div class="close modalToggle">&times;</div>
+        <h4 class="modal-title">Service Request</h4>
 
-        <form id="modal-form">
+        <form class="modal-form">
             <div class="modal-contactInfo">
                 <div class="input">
-                    <h5>Business Info</h5>
+                    <h5 class="modal-subtitle">Business Info</h5>
                     <div>
                         <input name="businessName" placeholder="Business Name"/>
                         <input name="contactName" placeholder="Contact Name"/>
@@ -15,7 +16,7 @@
                 </div>
 
                 <div class="input">
-                    <h5>Address</h5>
+                    <h5 class="modal-subtitle">Address</h5>
                     <div>
                         <input name="street1" placeholder="Street address"/>
                         <input name="street2" placeholder="Building or unit #"/>
@@ -29,7 +30,7 @@
             </div>
 
             <div>
-                <p><strong>Tell us what you need.</strong> Please include how many machines you need
+                <p class="modal-subtitle"><strong>Tell us what you need.</strong> Please include how many machines you need
                 serviced, their model #s, and a detailed description of the problem you are having.</p>
                 <textarea name="problemNotes"></textarea>
             </div>

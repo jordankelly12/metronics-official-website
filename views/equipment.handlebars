@@ -2,6 +2,9 @@
     <nav>
         <h1 class="brand">METRONICS<span>inc</span></h1>
 
+        <button class="modalToggle btn-text">Request Service</button>
+        <button class="modalToggle btn-icon"><i class="fas fa-tools"></i></button>
+
         <ul class="nav-menu">
             <li class="nav-link"><a>About</a></li>
             <li class="nav-link"><a>Services</a></li>
@@ -44,9 +47,9 @@
     </div>
 </aside>
 
-<main class="container">
+<main class="container" id="equipment-page">
     <div class="product-section" id="machines">
-        <h2>A/C Machines</h2>
+        <h3>A/C Machines</h3>
         <hr/>
 
         <div class="product-grid">
@@ -57,7 +60,7 @@
     </div>
 
     <div class="product-section" id="accessories">
-        <h2>Accessories</h2>
+        <h3>Accessories</h3>
         <hr/>
 
         <div class="product-grid">
@@ -68,7 +71,7 @@
     </div>
 
     <div class="product-section" id="tools">
-        <h2>Tools</h2>
+        <h3>Tools</h3>
         <hr/>
 
         <div class="product-grid">
@@ -79,7 +82,7 @@
     </div>
 
     <div class="product-section" id="consumables">
-        <h2>Consumables</h2>
+        <h3>Consumables</h3>
         <hr/>
 
         <div class="product-grid">
@@ -89,5 +92,7 @@
         </div>
     </div>
 </main>
+
+{{> modal-block}}
 
 <!-- TODO: Make phone number prompt action on mobile device -->

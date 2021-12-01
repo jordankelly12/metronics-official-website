@@ -22,7 +22,7 @@ aside {
   align-content: center;
   margin-top: 40px;
   padding: 0 2.5%;
-  height: 100%;
+  height: fit-content;
   width: 25%;
   position: fixed;
   left: 0;
@@ -62,7 +62,6 @@ aside {
 }
 
 .container {
-  margin-top: 60px;
   margin-left: 25%;
   padding: 40px 2.5%;
   position: relative;
@@ -75,7 +74,7 @@ aside {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   column-gap: 20px;
   row-gap: 30px;
 }
@@ -105,33 +104,27 @@ aside {
 /* =================
    TYPOGRAPHY STYLES
    ================= */
-h2 {
+h3 {
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: $blue;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   &::before {
     display: block;
     content: " ";
-    margin-top: -110px;
-    height: 110px;
+    margin-top: -100px;
+    height: 100px;
     visibility: hidden;
     pointer-events: none;
   }
 }
 
-h3 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  margin-bottom: 20px;
-}
-
 h4 {
   font-size: clamp(1rem, 2.5vw, 1.6rem);
-  line-height: 1.5;
   margin-top: 20px;
 }
 
-.callout p{
-  font-size: clamp(0.85rem, 1.6vw, 1.6rem);
+.callout p {
+  font-size: clamp(0.85rem, 1.6vw, 1.5rem);
+  line-height: 1.2;
 }
 .side-navbar a {
   font-size: clamp(1rem, 1.6vw, 1.6rem);
@@ -154,12 +147,11 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
-  nav ul {
-    gap: 3em;
-  }
-
   aside {
+    margin: 5% !important;
     width: 30%;
+    left: -40px;
+    min-height: fit-content;
   }
 
   .container {
@@ -179,11 +171,13 @@ hr {
   aside {
     position: relative;
     margin: 75px auto 15px auto;
+    left: 0;
     width: 90%;
   }
   .callout {
     padding: 5%;
     display: flex;
+    justify-content: space-around;
     gap: 10%;
     max-width: 100%;
     align-content: center;
@@ -205,6 +199,4 @@ hr {
     padding: 10px 0;
     width: 95%;
   }
-
-  @import 'nav-mobile';
 }
