@@ -3,10 +3,8 @@
 - About page either needs content or needs to be excluded. Leaning towards exclusion at this point.
 - Redesign the callout box on the equipment page for small screens. Looks wonky.
 - Load real data onto equipment page from database.
-- Form data needs to be sent to backend API from the contact form and the service request form.
 - Need some javascript/regex to format phone number on the form input.
 - Need to create a toast to pop up when a form is submitted to say: "Your message has been sent".
 
 
 ** BACK END
-- Need to set up controller and api routes to plug form data into database.
