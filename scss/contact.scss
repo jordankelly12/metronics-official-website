@@ -15,11 +15,11 @@
 /* =================
    PAGE LAYOUT
    ================= */
-.container {
+#contact-page {
   display: flex;
-  flex-flow: column wrap;
-  max-width: 1300px;
-  padding: 0 5%;
+  flex-flow: column;
+  max-width: 1250px;
+  padding: 5%;
 }
 
 .contact-title {
@@ -31,12 +31,9 @@
 }
 
 .contact-area {
-  margin-top: 30px;
+  margin: 30px 0;
   display: flex;
   gap: 7%;
-  & > div {
-    width: 50%;
-  }
 }
 
 form {
@@ -45,32 +42,20 @@ form {
   gap: 10px;
 }
 
-input, textarea {
-  padding: 10px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 100;
-  width: 100%;
-  border: 0.5px solid lightgrey;
-  border-radius: 5px;
-}
-
-textarea {
-  height: 14rem;
-}
-
 .contact-details {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  justify-content: center;
+  align-content: center;
   width: 100%;
 }
 
 .contact-item {
+  margin: 0 10%;
   display: grid;
-  grid-template-columns: 10% 50%;
-  gap: 5vw;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
 }
 
 /* =================
@@ -85,61 +70,32 @@ h2 {
 
 .instructions {
   padding: 2.5rem 0 2rem 0;
-  font-size: clamp(1.5rem, 1.3vw, 1.7rem);
+  font-size: clamp(1.2rem, 1.3vw, 1.5rem);
 }
 
 .contact-item p {
   padding: 0;
   align-self: center;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 
 /* =================
    COMPONENT STYLES
    ================= */
-hr {
-  border: 1px solid $dark;
-}
-
 .btn-contact {
-  padding: 10px 20px;
-  background: $yellow;
-  font-size: 1.2rem;
-  font-weight: 500;
   width: fit-content;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 /* =================
    MEDIA QUERIES
    ================= */
-@media screen and (max-width: 1200px) {
-
-}
-
 @media screen and (max-width: 1000px) {
-  nav ul {
-    gap: 3em;
-  }
-
-  .container {
-    padding-bottom: 4rem;
-  }
-
   .contact-area {
-    margin-top: 30px;
     display: flex;
-    flex-flow: column-reverse wrap;
+    flex-flow: column-reverse;
     gap: 5rem;
+    justify-content: center;
     align-content: center;
-    & > div {
-      width: 80%;
-    }
   }
 
   .contact-details {
@@ -187,5 +143,4 @@ hr {
   .contact-form {
     width: 100%;
   }
-  @import 'nav-mobile';
 }

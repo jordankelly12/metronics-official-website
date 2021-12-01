@@ -9,10 +9,10 @@ $(document).ready(() => {
         const page = e.target.innerHTML.toLowerCase();
         window.location.pathname = (`/${page}`);
     });
-    $('.equipmentLink').on('click', e => {
-        e.preventDefault();
-        window.location.pathname = ('/equipment');
-    });
+    // $('.equipmentLink').on('click', e => {
+    //     e.preventDefault();
+    //     window.location.pathname = ('/equipment');
+    // });
 
     // Toggle navigation menu for small screens
     let showMenu = false;
@@ -40,7 +40,8 @@ $(document).ready(() => {
         }
     });
 
-    $('#modal-form').on('submit', e => {
+    // Submit service request
+    $('.modal-form').on('submit', e => {
         e.preventDefault();
         // Capture form data
         const formData = Object.fromEntries(new FormData(e.target));
@@ -62,8 +63,8 @@ $(document).ready(() => {
         $('#service-modal')[0].style.display = 'none';
     });
 
-    // Send general inquiry email
-    $('#contact-form').on('submit', e => {
+    // Submit general inquiry
+    $('.contact-form').on('submit', e => {
         e.preventDefault();
         // Capture form data
         const formData = Object.fromEntries(new FormData(e.target));
@@ -75,5 +76,9 @@ $(document).ready(() => {
         e.target.name.value = '';
         e.target.email.value = '';
         e.target.message.value = '';
+    });
+
+    $("input[name='phone']").on('keyup', e => {
+        e.target.val.replace(/^(\d{3})(\d{3})(\d+)$/, "($1)$2-$3");
     });
 });

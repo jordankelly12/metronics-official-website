@@ -30,7 +30,7 @@ module.exports = app => {
             res.render('equipment', {
                 machines, accessories, tools, consumables,
                 title: 'Metronics, Inc. | Equipment',
-                script: 'js/equipment.js',
+                script: 'js/observer.js',
                 style: 'css/equipment.css'
             })
         } catch(err) { console.error(err) }
@@ -40,7 +40,6 @@ module.exports = app => {
     app.get('/contact', (req, res) => {
         res.render('contact', {
             title: 'Metronics, Inc. | Contact',
-            script: 'js/contact.js',
             style: 'css/contact.css'
         })
     })

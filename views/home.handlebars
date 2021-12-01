@@ -2,6 +2,9 @@
     <nav>
         <h1 class="brand">METRONICS<span>inc</span></h1>
 
+        <button class="modalToggle btn-text">Request Service</button>
+        <button class="modalToggle btn-icon"><i class="fas fa-tools"></i></button>
+
         <ul class="nav-menu">
             <li class="nav-link"><a>About</a></li>
             <li class="nav-link"><a>Services</a></li>
@@ -17,35 +20,21 @@
     </nav>
 </header>
 
-<main class="container">
-    <section class="left-column">
-        <div>
-            <h2>A/C RECOVERY & RECYCLING</h2>
-            <h3>REPAIR SERVICES</h3>
-            <p>
-                Servicing automotive repair facilities in the San Francisco Bay
-                and surrounding areas since 1980.
-            </p>
+<main class="container" id="home-page">
+    <div>
+        <h2>A/C RECOVERY & RECYCLING</h2>
+        <h3>REPAIR SPECIALISTS</h3>
+        <p>
+            Servicing automotive repair facilities in the San Francisco Bay
+            and surrounding areas since 1980.
+        </p>
 
-            <div class="btn-div">
-                <button class="btn modalToggle">Request Service</button>
-                <button class="btn equipmentLink">Purchase Equipment</button>
-            </div>
-        </div>
+    </div>
+    <img class="sc-logo" src="img/logos/robinair-sc-logo.png" alt="Authorized Service Center Logo">
 
-        <div class="logo-div">
-            <p>Brands we serve:</p>
-            <div class="logos">
-                <img src="img/logos/robinair-logo.png" alt="Robinair logo"/>
-                <img src="img/logos/snapon-logo-bw.png" alt="Snapon logo"/>
-                <img src="img/logos/mastercool-logo.png" alt="Mastercool logo"/>
-            </div>
-        </div>
-    </section>
-
-    <section class="right-column">
-        <img src="img/robinair_17800C.png" alt="Robinair 17800C Machine"/>
-    </section>
+<!--    <section class="right-column">-->
+<!--        <img src="img/robinair_17800C.png" alt="Robinair 17800C Machine"/>-->
+<!--    </section>-->
 </main>
 
 {{> modal-block}}

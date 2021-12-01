@@ -1,5 +1,6 @@
 @import 'config';
 
+/* LAYOUT */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,13 +12,22 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   background: $light;
-  color: $dark;
+  min-height: 100vh;
+}
+
+header {
+  width: 100vw;
+  height: 65px;
+}
+
+.container, aside {
+  min-height: calc(100vh - 65px);
 }
 
 .container {
-  margin: 60px auto 0 auto;
+  margin: 0 auto;
+  padding: 20px min(60px, 5%);
 }
 
 .btn-div {
@@ -25,11 +35,39 @@ body {
   gap: 50px;
 
   button {
-    height: 65px;
     width: 140px;
   }
 }
 
+/* TYPOGRAPHY */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $dark;
+}
+
+input, textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  font-weight: 100;
+}
+
+h2 {
+  font-weight: 100;
+}
+
+h3 {
+  color: $blue;
+}
+
+p {
+  line-height: 1.5;
+}
+
+hr {
+  border: 1px solid $dark;
+}
+
+/* COMPONENTS */
 img {
   height: auto;
   max-width: 100%;
@@ -42,7 +80,7 @@ img {
   font-weight: 600;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
 
   &:hover {
     cursor: pointer;
@@ -50,5 +88,16 @@ img {
   }
 }
 
-@import 'navbar';
-@import 'modal';
+input, textarea {
+  padding: 10px;
+  width: 100%;
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 14rem;
+}
+
+@import "modal";
+@import "navbar";

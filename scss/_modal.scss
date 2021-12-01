@@ -1,18 +1,26 @@
 @import 'config';
 
 // Layout
-.modal {
-  background: gray;
-  position: absolute;
+#service-modal {
+  position: fixed;
   top: 60px;
-  height: 175%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(gray, 0.9);
+  overflow-y: scroll;
 }
 .modal-content {
-  margin: 2% 5%;
-  padding: 3%;
+  position: relative;
+  top: 20px;
+  margin: auto;
+  offset: 60px 0;
+  padding: 1% 3% 3% 3%;
   background: $light;
   border-radius: 25px;
+  width: min(900px, 95%);
 }
+
 .modal-contactInfo {
   display: grid;
   grid-template-columns: 4fr 5fr;
@@ -29,33 +37,41 @@
   gap: 4px;
 }
 
+
 // Typography
-.modal h4 {
-  text-align: center;
+.modal-title {
   color: $blue;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  margin-bottom: 3%;
 }
-.modal h5, .modal p {
-  font-size: 1.1rem;
-  margin: 5px;
+
+.modal-subtitle {
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 1%;
+  padding: 0 1%;
 }
 
 // Components
  .submitRequest {
   margin-right: 2rem;
 }
+
 .close {
+  display: flex;
+  justify-content: flex-end;
   color: #ccc;
-  float: right;
   font-size: 30px;
   &:hover, &:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+    @include easeOut;
   }
 }
 
+// Media Queries
 @media screen and (max-width: 750px) {
   .modal h4 {
     text-align: start;
@@ -75,5 +91,11 @@
   .modal h5, .modal p {
     font-size: 1rem;
     margin: 5px;
+  }
+  input, textarea {
+    padding: 10px;
+  }
+  textarea {
+    height: 10rem;
   }
 }
