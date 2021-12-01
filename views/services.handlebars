@@ -1,20 +1,29 @@
 <header>
     <nav>
-        <div>
-            <h1 id="brand">METRONICS<span>inc</span></h1>
-            <ul>
-                <li class="nav-link">About</li>
-                <li class="nav-link active">Services</li>
-                <li class="nav-link">Equipment</li>
-                <li class="nav-link">Contact</li>
-            </ul>
+        <h1 class="brand">METRONICS<span>inc</span></h1>
+
+        <button class="modalToggle btn-text">Request Service</button>
+        <button class="modalToggle btn-icon"><i class="fas fa-tools"></i></button>
+
+        <ul class="nav-menu">
+            <li class="nav-link"><a>About</a></li>
+            <li class="nav-link active"><a>Services</a></li>
+            <li class="nav-link"><a>Equipment</a></li>
+            <li class="nav-link"><a>Contact</a></li>
+        </ul>
+
+        <div class="btn-menu">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
         </div>
     </nav>
 </header>
-<main id="services-page">
+
+<main class="container" id="services-page">
     <h2>Whatever you need, we got you covered...</h2>
 
-    <div class="services-div">
+    <section class="services-section">
         <div class="service-item">
             <h3>MAINTENANCE</h3>
             <p>Regular maintenance is essential to prevent your equipment
@@ -42,12 +51,7 @@
                 your shop then let us help you match your needs with the
                 right tools.</p>
         </div>
-    </div>
-
-    <div class="btn-div">
-        <button class="btn-link btn-toggleServiceForm">Request Service</button>
-        <button class="btn-link btn-equipment">Purchase Equipment</button>
-    </div>
+    </section>
 
     <h4>Questions? Call us at: (415) 309-8160</h4>
 </main>

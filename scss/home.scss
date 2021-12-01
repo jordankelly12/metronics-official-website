@@ -1,8 +1,92 @@
 @import 'config';
-@import 'general';
 
-main {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: center;
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+
+/* =================
+   GLOBAL STYLES
+   ================= */
+@import 'global';
+
+/* =================
+   PAGE LAYOUT
+   ================= */
+#home-page {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  max-width: 1250px;
+  background-image: url('../img/robinair_17800C.png');
+  background-repeat: no-repeat;
+  background-size: min(600px, 90%);
+  background-position: bottom 20px right;
 }
+
+/* =================
+   TYPOGRAPHY STYLES
+   ================= */
+h2 {
+  margin-top: 8%;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: clamp(3rem, 4vw, 3.2rem);
+}
+
+p {
+  margin: 4rem 0;
+  width: min(500px, 100%);
+  font-size: clamp(1rem, 1vw, 1.2rem);
+}
+
+.sc-logo {
+  height: auto;
+  width: min(200px, 50%);
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+  #home-page {
+    background-position: 50% bottom;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(white, calc(85%));
+    }
+  }
+
+  div, .sc-logo {
+    z-index: 2;
+  }
+
+  .container {
+    align-content: center;
+  }
+
+  h2, h3, p, img {
+    align-self: center;
+    text-align: center;
+  }
+  p {
+    margin: 4rem auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+}
+
+// Breakpoints: 750px, 1000px, 1300px

@@ -9,14 +9,14 @@ module.exports = app => {
     app.get('/about', (req, res) => {
         res.render('about', {
             title: 'Metronics, Inc. | About',
-            style: 'css/main.css'
+            style: 'css/about.css'
         })
     })
 
     app.get('/services', (req, res) => {
         res.render('services', {
             title: 'Metronics, Inc. | Services',
-            style: 'css/main.css'
+            style: 'css/services.css'
         })
     })
 
@@ -30,8 +30,8 @@ module.exports = app => {
             res.render('equipment', {
                 machines, accessories, tools, consumables,
                 title: 'Metronics, Inc. | Equipment',
-                script: 'js/equipment.js',
-                style: 'css/main.css'
+                script: 'js/observer.js',
+                style: 'css/equipment.css'
             })
         } catch(err) { console.error(err) }
 
@@ -40,8 +40,7 @@ module.exports = app => {
     app.get('/contact', (req, res) => {
         res.render('contact', {
             title: 'Metronics, Inc. | Contact',
-            script: 'js/contact.js',
-            style: 'css/main.css'
+            style: 'css/contact.css'
         })
     })
 }

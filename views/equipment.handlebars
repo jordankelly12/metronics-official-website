@@ -1,73 +1,98 @@
 <header>
     <nav>
-        <div>
-            <h1 id="brand">METRONICS<span>inc</span></h1>
-            <ul>
-                <li class="nav-link">About</li>
-                <li class="nav-link">Services</li>
-                <li class="nav-link active">Equipment</li>
-                <li class="nav-link">Contact</li>
-            </ul>
+        <h1 class="brand">METRONICS<span>inc</span></h1>
+
+        <button class="modalToggle btn-text">Request Service</button>
+        <button class="modalToggle btn-icon"><i class="fas fa-tools"></i></button>
+
+        <ul class="nav-menu">
+            <li class="nav-link"><a>About</a></li>
+            <li class="nav-link"><a>Services</a></li>
+            <li class="nav-link active"><a>Equipment</a></li>
+            <li class="nav-link"><a>Contact</a></li>
+        </ul>
+
+        <div class="btn-menu">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
         </div>
     </nav>
 </header>
 
-<div id="equipment-page">
-    <aside id="sidebar">
-        <div id="callout">
-            <p>Give us a call to inquire about pricing, financing options,
-                and to place an order.</p>
-            <h4>(415) 309-8160</h4>
-        </div>
-        <div id="side-nav">
-            <ul>
-                <li><a class="page-anchor active" href="#machines">A/C Machines</a></li>
-                <li><a class="page-anchor" href="#accessories">Accessories</a></li>
-                <li><a class="page-anchor" href="#tools">Tools</a></li>
-                <li><a class="page-anchor" href="#consumables">Consumables</a></li>
-            </ul>
-        </div>
-    </aside>
 
-    <main id="equipment-page-main">
-        <div class="product-section" id="machines">
-            <h2>A/C Machines</h2>
-            <hr />
-            <div class="product-grid">
-                {{#each machines}}
-                    {{> product-block}}
-                {{/each}}
-            </div>
-        </div>
-        <div class="product-section" id="accessories">
-            <h2>Accessories</h2>
-            <hr />
-            <div class="product-grid">
-                {{#each machines}}
-                    {{> product-block}}
-                {{/each}}
-            </div>
-        </div>
-        <div class="product-section" id="tools">
-            <h2>Tools</h2>
-            <hr />
-            <div class="product-grid" >
-                {{#each machines}}
-                    {{> product-block}}
-                {{/each}}
-            </div>
-        </div>
-        <div class="product-section" id="consumables">
-            <h2>Consumables</h2>
-            <hr />
-            <div class="product-grid">
-                {{#each machines}}
-                    {{> product-block}}
-                {{/each}}
-            </div>
-        </div>
-    </main>
-</div>
+<aside>
+    <div class="callout">
+        <p>
+            Give us a call to inquire about pricing, financing options,
+            and to place an order.
+        </p>
+        <h4>(415)<br/> 309-8160</h4>
+    </div>
+    <div class="side-navbar">
+        <ul>
+            <li>
+                <a class="page-anchor active" href="#machines">A/C Machines</a>
+            </li>
+            <li>
+                <a class="page-anchor" href="#accessories">Accessories</a>
+            </li>
+            <li>
+                <a class="page-anchor" href="#tools">Tools</a>
+            </li>
+            <li>
+                <a class="page-anchor" href="#consumables">Consumables</a>
+            </li>
+        </ul>
+    </div>
+</aside>
 
+<main class="container" id="equipment-page">
+    <div class="product-section" id="machines">
+        <h3>A/C Machines</h3>
+        <hr/>
 
+        <div class="product-grid">
+            {{#each machines}}
+                {{> product-block}}
+            {{/each}}
+        </div>
+    </div>
 
+    <div class="product-section" id="accessories">
+        <h3>Accessories</h3>
+        <hr/>
+
+        <div class="product-grid">
+            {{#each machines}}
+                {{> product-block}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="product-section" id="tools">
+        <h3>Tools</h3>
+        <hr/>
+
+        <div class="product-grid">
+            {{#each machines}}
+                {{> product-block}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="product-section" id="consumables">
+        <h3>Consumables</h3>
+        <hr/>
+
+        <div class="product-grid">
+            {{#each machines}}
+                {{> product-block}}
+            {{/each}}
+        </div>
+    </div>
+</main>
+
+{{> modal-block}}
+
+<!-- TODO: Make phone number prompt action on mobile device -->

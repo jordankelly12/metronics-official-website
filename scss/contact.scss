@@ -1,0 +1,146 @@
+@import 'config';
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+
+/* =================
+   GLOBAL STYLES
+   ================= */
+@import 'global';
+
+/* =================
+   PAGE LAYOUT
+   ================= */
+#contact-page {
+  display: flex;
+  flex-flow: column;
+  max-width: 1250px;
+  padding: 5%;
+}
+
+.contact-title {
+  margin-top: 50px;
+}
+
+.contact-form, .contact-area {
+  padding: 0 2%;
+}
+
+.contact-area {
+  margin: 30px 0;
+  display: flex;
+  gap: 7%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.contact-item {
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+}
+
+/* =================
+   TYPOGRAPHY STYLES
+   ================= */
+h2 {
+  padding-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.instructions {
+  padding: 2.5rem 0 2rem 0;
+  font-size: clamp(1.2rem, 1.3vw, 1.5rem);
+}
+
+.contact-item p {
+  padding: 0;
+  align-self: center;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+/* =================
+   COMPONENT STYLES
+   ================= */
+.btn-contact {
+  width: fit-content;
+}
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1000px) {
+  .contact-area {
+    display: flex;
+    flex-flow: column-reverse;
+    gap: 5rem;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .contact-details {
+    gap: 2rem;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .instructions {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .btn-div {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 95%;
+    padding: 0 0 2rem 0;
+  }
+
+  .instructions {
+    padding: 0 0 1.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  .btn-div {
+    gap: 1rem;
+  }
+
+  .contact-item {
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .contact-form, .contact-area {
+    padding: 0;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}

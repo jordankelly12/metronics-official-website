@@ -1,49 +1,42 @@
 <!-- Service Modal -->
-<div class="modal" id="service-modal" style="display:none;">
+<div id="service-modal" style="display:none;">
     <div class="modal-content">
-        <h4>Service Request</h4>
+        <div class="close modalToggle">&times;</div>
+        <h4 class="modal-title">Service Request</h4>
+
         <form class="modal-form">
             <div class="modal-contactInfo">
-                <div>
+                <div class="input">
+                    <h5 class="modal-subtitle">Business Info</h5>
                     <div>
-                        <h5>Business Name</h5>
-                        <input name="businessName" />
-                    </div>
-
-                    <div>
-                        <h5>Address</h5>
-                        <input name="street1" placeholder="Street address" />
-                        <input name="street2" placeholder="Building or unit #" />
-                        <div class="address-3-col">
-                            <input name="city" placeholder="City" />
-                            <input name="state" placeholder="State" value="CA" style="text-align:center;" />
-                            <input name="zipcode" placeholder="Zip code" />
-                        </div>
+                        <input name="businessName" placeholder="Business Name"/>
+                        <input name="contactName" placeholder="Contact Name"/>
+                        <input name="phone" placeholder="Phone #"/>
                     </div>
                 </div>
 
-                <div>
+                <div class="input">
+                    <h5 class="modal-subtitle">Address</h5>
                     <div>
-                        <h5>Contact Name</h5>
-                        <input name="contactName" />
-                    </div>
-
-                    <div>
-                        <h5>Phone #</h5>
-                        <input name="phone" />
+                        <input name="street1" placeholder="Street address"/>
+                        <input name="street2" placeholder="Building or unit #"/>
+                        <div class="address">
+                            <input name="city" placeholder="City"/>
+                            <input name="state" placeholder="State" value="CA" style="text-align:center;"/>
+                            <input name="zipcode" placeholder="Zip code"/>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div>
-                <p><strong>Tell us what you need.</strong> Please include how many machines you need
+                <p class="modal-subtitle"><strong>Tell us what you need.</strong> Please include how many machines you need
                 serviced, their model #s, and a detailed description of the problem you are having.</p>
                 <textarea name="problemNotes"></textarea>
             </div>
 
             <div>
-                <button class="btn-submitService" type="submit">Send</button>
-                <button class="btn-toggleServiceForm">Cancel</button>
+                <button class="btn" type="submit">Send</button>
             </div>
         </form>
     </div>

@@ -1,0 +1,202 @@
+@import 'config';
+/* TABLE OF CONTENTS
+   - Global Styles
+   - Page Layout
+   - Typography Styles
+   - Component Styles
+   - Media Queries
+   */
+
+/* =================
+   GLOBAL STYLES
+   ================= */
+@import 'global';
+
+/* =================
+   PAGE LAYOUT
+   ================= */
+aside {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 5%;
+  align-content: center;
+  margin-top: 40px;
+  padding: 0 2.5%;
+  height: fit-content;
+  width: 25%;
+  position: fixed;
+  left: 0;
+}
+
+.callout {
+  max-width: 250px;
+  padding: 25px;
+  background: $blue;
+  border-radius: 25px;
+  font-size: 1.4em;
+  color: $yellow;
+  text-align: center;
+}
+
+.side-navbar {
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 40px;
+    align-content: center;
+    list-style: none;
+    padding: 2rem;
+  }
+
+  a {
+    font-size: 1.3em;
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
+    &.active {
+      font-weight: 700;
+    }
+  }
+}
+
+.container {
+  margin-left: 25%;
+  padding: 40px 2.5%;
+  position: relative;
+  width: min(1250px, 75%);
+}
+
+.product-section {
+  margin-bottom: 60px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.product-item {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  padding-right: 20px;
+  gap: 15px;
+
+  div {
+    position: relative;
+
+    a {
+      position: absolute;
+      bottom: 15px;
+      color: $blue;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+/* =================
+   TYPOGRAPHY STYLES
+   ================= */
+h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 20px;
+  &::before {
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+h4 {
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  margin-top: 20px;
+}
+
+.callout p {
+  font-size: clamp(0.85rem, 1.6vw, 1.5rem);
+  line-height: 1.2;
+}
+.side-navbar a {
+  font-size: clamp(1rem, 1.6vw, 1.6rem);
+}
+
+/* =================
+   COMPONENT STYLES
+   ================= */
+hr {
+  border: 1px solid gray;
+  margin-bottom: 30px;
+}
+
+
+/* =================
+   MEDIA QUERIES
+   ================= */
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+  aside {
+    margin: 5% !important;
+    width: 30%;
+    left: -40px;
+    min-height: fit-content;
+  }
+
+  .container {
+    width: 70%;
+    margin-left: 31%;
+    padding-left: 0;
+  }
+
+  .product-grid {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  aside {
+    position: relative;
+    margin: 75px auto 15px auto;
+    left: 0;
+    width: 90%;
+  }
+  .callout {
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10%;
+    max-width: 100%;
+    align-content: center;
+    p {
+      width: 65%;
+      margin: auto;
+    }
+    h4 {
+      margin: auto;
+    }
+  }
+
+  .side-navbar {
+    display: none;
+  }
+
+  .container {
+    margin: 5% auto;
+    padding: 10px 0;
+    width: 95%;
+  }
+}
