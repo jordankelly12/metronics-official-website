@@ -2,7 +2,7 @@ $(document).ready(() => {
     // Navigation links
     $('.brand').on('click', e => {
         e.preventDefault();
-        window.location.pathname = ('/');
+        window.location.pathname = ('/home');
     });
     $('.nav-link').on('click', e => {
         e.preventDefault();

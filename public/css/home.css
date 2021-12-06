@@ -376,7 +376,7 @@ h3 {
   font-size: clamp(3rem, 4vw, 3.2rem);
 }
 
-p {
+#home-page p {
   margin: 4rem 0;
   width: min(500px, 100%);
   font-size: clamp(1rem, 1vw, 1.2rem);
