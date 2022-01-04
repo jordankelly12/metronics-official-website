@@ -46,15 +46,17 @@ $(document).ready(() => {
         const formData = Object.fromEntries(new FormData(e.target));
 
         const serviceRequest = {
-            businessName: formData.businessName,
-            contactName: formData.contactName,
-            phone: formData.phone,
-            address: {
-                street1: formData.street1,
-                street2: formData.street2,
-                city: formData.city,
-                state: formData.state,
-                zipcode: formData.zipcode,
+            customer: {
+                businessName: formData.businessName,
+                contactName: formData.contactName,
+                phone: formData.phone,
+                address: {
+                    street1: formData.street1,
+                    street2: formData.street2,
+                    city: formData.city,
+                    state: formData.state,
+                    zipcode: formData.zipcode,
+                },
             },
             issueNotes: formData.issueNotes
         }
