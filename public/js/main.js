@@ -98,3 +98,5 @@ $(document).ready(() => {
     //     e.target.val.replace(/^(\d{3})(\d{3})(\d+)$/, "($1)$2-$3");
     // });
 });
+
+// TODO: limit character count on message form to something like 250 or 500.
