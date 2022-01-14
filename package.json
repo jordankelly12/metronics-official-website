@@ -2,6 +2,7 @@
   "name": "metronics-official-website",
   "version": "1.0.0",
   "description": "The official website for Metronics, Inc.",
+  "homepage": "https://metronics-website.herokuapp.com/",
   "main": "server.js",
   "engines": {
     "node": "17.3.0",
@@ -27,7 +28,6 @@
   "bugs": {
     "url": "https://github.com/profjjk/metronics-official-website/issues"
   },
-  "homepage": "https://github.com/profjjk/metronics-official-website#readme",
   "devDependencies": {
     "concurrently": "^6.3.0",
     "dotenv": "^10.0.0",
