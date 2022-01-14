@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "The official website for Metronics, Inc.",
   "main": "server.js",
+  "engines": {
+    "node": "17.3.0",
+    "npm": "8.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch scss:public/css",
