@@ -67,7 +67,7 @@ $(document).ready(() => {
         }
 
         // Send request to server.
-        $.post('http://localhost:5050/api/request', serviceRequest, () => console.log('Request sent'));
+        $.post('https://metronics-website.herokuapp.com/api/request', serviceRequest, () => console.log('Request sent'));
 
         // Reset form fields
         e.target.businessName.value = '';
@@ -91,7 +91,7 @@ $(document).ready(() => {
         const formData = Object.fromEntries(new FormData(e.target));
 
         // Send request to server.
-        $.post('http://localhost:5050/api/message', formData, () => console.log('Message sent'));
+        $.post('https://metronics-website.herokuapp.com/api/message', formData, () => console.log('Message sent'));
 
         // Reset form fields
         e.target.name.value = '';
