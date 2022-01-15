@@ -7,7 +7,6 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5555;
-app.set('port', PORT);
 
 app.use('*', cors());
 app.use(express.urlencoded({ extended: true }));
