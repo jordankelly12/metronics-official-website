@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
+const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -10,7 +11,7 @@ const PORT = process.env.PORT || 5555;
 app.use('*', cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
