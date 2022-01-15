@@ -9,26 +9,66 @@
   },
   {
     "_id": 2,
-    "name": "34788NI",
-    "description": "Premier R-134A refrigerant recovery, recycling, and recharging machine.",
-    "image": "img/products/machines/robinair_AC1234-6.png",
+    "name": "34888HD",
+    "description": "Advanced R134A Heavy-Duty Recover, Recycle, Recharge Machine",
+    "image": "img/products/machines/robinair_34888HD.png",
     "category": "machine",
-    "attachment": "docs/robinair_34788NI_flyer.pdf"
+    "attachment": "docs/robinair_34888HD_flyer.pdf"
   },
   {
     "_id": 3,
-    "name": "34788NI",
-    "description": "Premier R-134A refrigerant recovery, recycling, and recharging machine.",
-    "image": "img/products/machines/robinair_34788NI.png",
+    "name": "17800C",
+    "description": "Multi-refrigerant recover, recycle, recharge machine.",
+    "image": "img/products/machines/robinair_17800C.png",
     "category": "machine",
-    "attachment": "docs/robinair_34788NI_flyer.pdf"
+    "attachment": "docs/robinair_17800C_flyer.pdf"
   },
   {
     "_id": 4,
-    "name": "34788NI",
-    "description": "Premier R-134A refrigerant recovery, recycling, and recharging machine.",
-    "image": "img/products/machines/robinair_34788NI.png",
+    "name": "AC1234-4-SL",
+    "description": "Premier R-1234yf Recover, Recycle and Recharge Machine for Mobile Service.",
+    "image": "img/products/machines/robinair_AC1234-4-SL.png",
     "category": "machine",
-    "attachment": "docs/robinair_34788NI_flyer.pdf"
+    "attachment": "docs/robinair_AC1234-4-SL_flyer.pdf"
+  },
+  {
+    "_id": 5,
+    "name": "Oil Injector R-134A",
+    "description": "Use this syringe-type injector to add oil to a fully pressurized A/C system.",
+    "image": "img/products/tools/oil_injector_r134a.jpg",
+    "category": "tool",
+    "attachment": ""
+  },
+  {
+    "_id": 6,
+    "name": "Tank Adapter R-134A",
+    "description": "Tank adapter for 34288 models.",
+    "image": "img/products/tools/tank_adapter.jpg",
+    "category": "tool",
+    "attachment": ""
+  },
+  {
+    "_id": 7,
+    "name": "Vinyl Dust Cover",
+    "description": "Protect your investment with a heavy-duty vinyl dust cover. Fits 34900, 34800-2K, and 17800B Series.",
+    "image": "img/products/accessories/dust_cover.jpg",
+    "category": "accessory",
+    "attachment": ""
+  },
+  {
+    "_id": 8,
+    "name": "Vehicle Database",
+    "description": "Confirm A/C system charge capacities directly from your Robinair A/C RRR machine for R-134a systems. Includes charge amounts and component oil capacities for vehicle model years 1997-2020 using R-134a refrigerant.",
+    "image": "img/products/accessories/vehicle_database.jpeg",
+    "category": "accessory",
+    "attachment": ""
+  },
+  {
+    "_id": 8,
+    "name": "Printer Paper (3-pack)",
+    "description": "3 rolls of printer paper to suit the 30038 optional printer used with the 34788NI and 34788NI-H RRR machines.",
+    "image": "img/products/consumables/printer_paper.jpg",
+    "category": "consumable",
+    "attachment": ""
   }
 ]
