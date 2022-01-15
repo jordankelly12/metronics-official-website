@@ -2,11 +2,16 @@ $(document).ready(() => {
     // Navigation links
     $('.brand').on('click', e => {
         e.preventDefault();
-        window.location.pathname = ('/home');
+        window.location.pathname = ('/');
     });
     $('.nav-link').on('click', e => {
         e.preventDefault();
-        const page = e.target.innerHTML.toLowerCase();
+        let page;
+        if (e.target.innerHTML.toLowerCase() === 'home') {
+            page = "";
+        } else {
+            page = e.target.innerHTML.toLowerCase();
+        }
         window.location.pathname = (`/${page}`);
     });
 

@@ -1,6 +1,6 @@
 module.exports = app => {
-    app.get('/home', (req, res) => {
-        res.render('home', {
+    app.get('/', (req, res) => {
+        res.render('index', {
             title: 'Metronics, Inc.',
             style: 'css/home.css'
         })
