@@ -7,6 +7,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5555;
+app.set('port', PORT);
 
 app.use('*', cors());
 app.use(express.urlencoded({ extended: true }));
@@ -18,8 +19,8 @@ app.set('view engine', 'handlebars');
 
 const htmlRoutes = require('./routes/htmlRoutes.js');
 const apiRoutes = require('./routes/apiRoutes.js');
-app.use(htmlRoutes)
-app.use(apiRoutes)
+app.use(htmlRoutes);
+app.use(apiRoutes);
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/metronics_test')
     .then(() => console.log("Connected to Metronics database."))
