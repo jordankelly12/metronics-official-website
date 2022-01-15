@@ -16,8 +16,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-require('./routes/htmlRoutes.js')(app);
-require('./routes/apiRoutes.js')(app);
+const htmlRoutes = require('./routes/htmlRoutes.js');
+const apiRoutes = require('./routes/apiRoutes.js');
+app.use(htmlRoutes)
+app.use(apiRoutes)
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/metronics_test')
     .then(() => console.log("Connected to Metronics database."))
