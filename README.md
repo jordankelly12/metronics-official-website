@@ -6,7 +6,7 @@
 ---
 
 ## PROJECT SUMMARY
-The company’s first-ever website where customers can learn about the company, submit online requests for service, and browse equipment for sale. Built using JavaScript, Node.js, Express.js, JQuery, SCSS/Sass, MongoDB/Mongoose, rendered using the Handlebars templating engine, and deployed on AWS.
+The company’s first-ever website where customers can learn about the company, submit online requests for service, and browse equipment for sale. Built using JavaScript, Node.js, Express.js, JQuery, SCSS/Sass, MongoDB/Mongoose, rendered using the Handlebars templating engine.
 
 <center>
 <img src="assets/demo.gif" width="60%" height="60%"/>
